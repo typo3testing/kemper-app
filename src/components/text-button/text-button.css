@@ -1,0 +1,389 @@
+.TextButton {
+  flex: 0 0 auto;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  position: relative;
+  padding: 0 6px;
+}
+
+.ImageContainer {
+  width: 100%;
+  padding-bottom: 100%;
+  margin-left: -1px;
+  position: relative;
+}
+
+.Image {
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+}
+
+.Image,
+.ImageBackground {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ImageBackground {
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.Background {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 1px);
+
+  clip-path: polygon(
+    100% 100%,
+    0% 100%,
+    0% calc(100% - 50px),
+    calc(0% + 55px - 55px * 1) calc(50px + 55px * 0),
+    calc(0% + 55px - 55px * 0.998) calc(50px + 55px * 0.065),
+    calc(0% + 55px - 55px * 0.991) calc(50px + 55px * 0.131),
+    calc(0% + 55px - 55px * 0.981) calc(50px + 55px * 0.195),
+    calc(0% + 55px - 55px * 0.966) calc(50px + 55px * 0.259),
+    calc(0% + 55px - 55px * 0.947) calc(50px + 55px * 0.321),
+    calc(0% + 55px - 55px * 0.924) calc(50px + 55px * 0.383),
+    calc(0% + 55px - 55px * 0.897) calc(50px + 55px * 0.442),
+    calc(0% + 55px - 55px * 0.866) calc(50px + 55px * 0.5),
+    calc(0% + 55px - 55px * 0.831) calc(50px + 55px * 0.556),
+    calc(0% + 55px - 55px * 0.793) calc(50px + 55px * 0.609),
+    calc(0% + 55px - 55px * 0.752) calc(50px + 55px * 0.659),
+    calc(0% + 55px - 55px * 0.707) calc(50px + 55px * 0.707),
+    calc(0% + 55px - 55px * 0.659) calc(50px + 55px * 0.752),
+    calc(0% + 55px - 55px * 0.609) calc(50px + 55px * 0.793),
+    calc(0% + 55px - 55px * 0.556) calc(50px + 55px * 0.831),
+    calc(0% + 55px - 55px * 0.5) calc(50px + 55px * 0.866),
+    calc(0% + 55px - 55px * 0.442) calc(50px + 55px * 0.897),
+    calc(0% + 55px - 55px * 0.383) calc(50px + 55px * 0.924),
+    calc(0% + 55px - 55px * 0.321) calc(50px + 55px * 0.947),
+    calc(0% + 55px - 55px * 0.259) calc(50px + 55px * 0.966),
+    calc(0% + 55px - 55px * 0.195) calc(50px + 55px * 0.981),
+    calc(0% + 55px - 55px * 0.131) calc(50px + 55px * 0.991),
+    calc(0% + 55px - 55px * 0.065) calc(50px + 55px * 0.998),
+    calc(0% + 55px - 55px * 0) calc(50px + 55px * 1),
+    calc(0% + 55px - 55px * -0.065) calc(50px + 55px * 0.998),
+    calc(0% + 55px - 55px * -0.131) calc(50px + 55px * 0.991),
+    calc(0% + 55px - 55px * -0.195) calc(50px + 55px * 0.981),
+    calc(0% + 55px - 55px * -0.259) calc(50px + 55px * 0.966),
+    calc(0% + 55px - 55px * -0.321) calc(50px + 55px * 0.947),
+    calc(0% + 55px - 55px * -0.383) calc(50px + 55px * 0.924),
+    calc(0% + 55px - 55px * -0.442) calc(50px + 55px * 0.897),
+    calc(0% + 55px - 55px * -0.5) calc(50px + 55px * 0.866),
+    calc(0% + 55px - 55px * -0.556) calc(50px + 55px * 0.831),
+    calc(0% + 55px - 55px * -0.609) calc(50px + 55px * 0.793),
+    calc(0% + 55px - 55px * -0.659) calc(50px + 55px * 0.752),
+    calc(0% + 55px - 55px * -0.707) calc(50px + 55px * 0.707),
+    calc(0% + 55px - 55px * -0.752) calc(50px + 55px * 0.659),
+    calc(0% + 55px - 55px * -0.793) calc(50px + 55px * 0.609),
+    calc(0% + 55px - 55px * -0.831) calc(50px + 55px * 0.556),
+    calc(0% + 55px - 55px * -0.866) calc(50px + 55px * 0.5),
+    calc(0% + 55px - 55px * -0.897) calc(50px + 55px * 0.442),
+    calc(0% + 55px - 55px * -0.924) calc(50px + 55px * 0.383),
+    calc(0% + 55px - 55px * -0.947) calc(50px + 55px * 0.321),
+    calc(0% + 55px - 55px * -0.966) calc(50px + 55px * 0.259),
+    calc(0% + 55px - 55px * -0.981) calc(50px + 55px * 0.195),
+    calc(0% + 55px - 55px * -0.991) calc(50px + 55px * 0.131),
+    calc(0% + 55px - 55px * -0.998) calc(50px + 55px * 0.065),
+    calc(0% + 55px - 55px * -1) calc(50px + 55px * 0),
+    100% calc(50px)
+  );
+}
+
+.Text {
+  z-index: 10;
+  margin-left: -100%;
+  margin-right: -100%;
+  text-align: center;
+  font-size: 1.4em;
+  margin-top: 24px;
+  white-space: nowrap;
+  display: none !important;
+}
+
+.TextEdge {
+  margin-top: 0;
+}
+
+.TextButton.icon-AppHelp .Image {
+  background-image: url("../../../assets/images/icons/help-icon-secondary.svg");
+  background-size: 31px;
+}
+.TextButton.icon-AppHelpCurrent .Image {
+  background-image: url("../../../assets/images/icons/help-icon-primary.svg");
+  background-size: 31px;
+}
+
+.TextButton.icon-ReleasedNews .Image {
+  background-image: url("../../../assets/images/icons/news-icon-secondary.svg");
+  background-size: 39px;
+}
+.TextButton.icon-ReleasedNewsCurrent .Image {
+  background-image: url("../../../assets/images/icons/news-icon-primary.svg");
+  background-size: 39px;
+}
+
+.TextButton.icon-WeatherInfo .Image {
+  background-image: url("../../../assets/images/icons/weather-icon-secondary.svg");
+  background-size: 43px;
+}
+.TextButton.icon-WeatherInfoCurrent .Image {
+  background-image: url("../../../assets/images/icons/weather-icon-primary.svg");
+  background-size: 43px;
+}
+
+.TextButton.icon-RoomMeasure .Image {
+  background-image: url("../../../assets/images/icons/room-measure-icon-secondary.svg");
+  background-size: 42px;
+}
+
+.TextButton.icon-MenuCalculator .Image {
+  background-image: url("../../../assets/images/icons/calculator-icon-secondary.svg");
+  background-size: 28px;
+}
+.TextButton.icon-MenuCalculatorCurrent .Image {
+  background-image: url("../../../assets/images/icons/calculator-icon-primary.svg");
+  background-size: 28px;
+}
+
+.TextButton.icon-MenuMap .Image {
+  background-image: url("../../../assets/images/icons/location-icon-secondary.svg");
+  background-size: 25px;
+}
+.TextButton.icon-MenuMapCurrent .Image {
+  background-image: url("../../../assets/images/icons/location-icon-primary.svg");
+  background-size: 25px;
+}
+
+.TextButton.icon-ar .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 0);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+}
+
+.TextButton.icon-roomplanner .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+}
+
+.TextButton.icon-projects .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+}
+
+.TextButton.icon-information .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+}
+
+.TextButton.icon-vr .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+}
+
+.TextButton.icon-walk .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+}
+
+.TextButton.icon-livemeasure .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+}
+
+.TextButton.icon-sketchplan .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+}
+
+.TextButton.icon-info .Image {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+}
+
+@media only screen and (orientation: portrait) and (min-height: 736px) {
+  .TextButton {
+    width: 14vw;
+  }
+
+  .Background {
+    clip-path: polygon(
+      100% 100%,
+      0% 100%,
+      0% calc(100% - 7vw),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 1) calc(7vw + (7vw + 5px) * 0),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.985)
+        calc(7vw + (7vw + 5px) * 0.174),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.94)
+        calc(7vw + (7vw + 5px) * 0.342),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.866) calc(7vw + (7vw + 5px) * 0.5),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.766)
+        calc(7vw + (7vw + 5px) * 0.643),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.643)
+        calc(7vw + (7vw + 5px) * 0.766),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.5) calc(7vw + (7vw + 5px) * 0.866),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.342)
+        calc(7vw + (7vw + 5px) * 0.94),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0.174)
+        calc(7vw + (7vw + 5px) * 0.985),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * 0) calc(7vw + (7vw + 5px) * 1),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.174)
+        calc(7vw + (7vw + 5px) * 0.985),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.342)
+        calc(7vw + (7vw + 5px) * 0.94),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.5)
+        calc(7vw + (7vw + 5px) * 0.866),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.643)
+        calc(7vw + (7vw + 5px) * 0.766),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.766)
+        calc(7vw + (7vw + 5px) * 0.643),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.866)
+        calc(7vw + (7vw + 5px) * 0.5),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.94)
+        calc(7vw + (7vw + 5px) * 0.342),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -0.985)
+        calc(7vw + (7vw + 5px) * 0.174),
+      calc(0% + (7vw + 5px) - (7vw + 5px) * -1) calc(7vw + (7vw + 5px) * 0),
+      100% calc(7vw)
+    );
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .TextButton {
+    width: 20vh;
+  }
+
+  .Background {
+    clip-path: polygon(
+      100% 100%,
+      0% 100%,
+      0% calc(100% - 10vh),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 1) calc(10vh + (10vh + 5px) * 0),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.991)
+        calc(10vh + (10vh + 5px) * 0.136),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.963)
+        calc(10vh + (10vh + 5px) * 0.27),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.917)
+        calc(10vh + (10vh + 5px) * 0.398),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.854)
+        calc(10vh + (10vh + 5px) * 0.52),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.776)
+        calc(10vh + (10vh + 5px) * 0.631),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.683)
+        calc(10vh + (10vh + 5px) * 0.731),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.577)
+        calc(10vh + (10vh + 5px) * 0.817),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.46)
+        calc(10vh + (10vh + 5px) * 0.888),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.335)
+        calc(10vh + (10vh + 5px) * 0.942),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.203)
+        calc(10vh + (10vh + 5px) * 0.979),
+      calc(0% + 10vh + 5px - (10vh + 5px) * 0.068)
+        calc(10vh + (10vh + 5px) * 0.998),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.068)
+        calc(10vh + (10vh + 5px) * 0.998),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.203)
+        calc(10vh + (10vh + 5px) * 0.979),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.335)
+        calc(10vh + (10vh + 5px) * 0.942),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.46)
+        calc(10vh + (10vh + 5px) * 0.888),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.577)
+        calc(10vh + (10vh + 5px) * 0.817),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.683)
+        calc(10vh + (10vh + 5px) * 0.731),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.776)
+        calc(10vh + (10vh + 5px) * 0.631),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.854)
+        calc(10vh + (10vh + 5px) * 0.52),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.917)
+        calc(10vh + (10vh + 5px) * 0.398),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.963)
+        calc(10vh + (10vh + 5px) * 0.27),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -0.991)
+        calc(10vh + (10vh + 5px) * 0.136),
+      calc(0% + 10vh + 5px - (10vh + 5px) * -1) calc(10vh + (10vh + 5px) * 0),
+      100% calc(10vh)
+    );
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .TextButton {
+    width: 15%;
+    padding: 0 8px;
+  }
+
+  .Text {
+    height: 2em;
+    font-size: 1.1em;
+    font-family: inherit;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Background {
+    clip-path: polygon(
+      100% 100%,
+      0% 100%,
+      0% calc(100% - 30px),
+      calc(0% + 35px - 35px * 1) calc(30px + 35px * 0),
+      calc(0% + 35px - 35px * 0.992) calc(30px + 35px * 0.125),
+      calc(0% + 35px - 35px * 0.969) calc(30px + 35px * 0.249),
+      calc(0% + 35px - 35px * 0.93) calc(30px + 35px * 0.368),
+      calc(0% + 35px - 35px * 0.876) calc(30px + 35px * 0.482),
+      calc(0% + 35px - 35px * 0.809) calc(30px + 35px * 0.588),
+      calc(0% + 35px - 35px * 0.729) calc(30px + 35px * 0.685),
+      calc(0% + 35px - 35px * 0.637) calc(30px + 35px * 0.771),
+      calc(0% + 35px - 35px * 0.536) calc(30px + 35px * 0.844),
+      calc(0% + 35px - 35px * 0.426) calc(30px + 35px * 0.905),
+      calc(0% + 35px - 35px * 0.309) calc(30px + 35px * 0.951),
+      calc(0% + 35px - 35px * 0.187) calc(30px + 35px * 0.982),
+      calc(0% + 35px - 35px * 0.063) calc(30px + 35px * 0.998),
+      calc(0% + 35px - 35px * -0.063) calc(30px + 35px * 0.998),
+      calc(0% + 35px - 35px * -0.187) calc(30px + 35px * 0.982),
+      calc(0% + 35px - 35px * -0.309) calc(30px + 35px * 0.951),
+      calc(0% + 35px - 35px * -0.426) calc(30px + 35px * 0.905),
+      calc(0% + 35px - 35px * -0.536) calc(30px + 35px * 0.844),
+      calc(0% + 35px - 35px * -0.637) calc(30px + 35px * 0.771),
+      calc(0% + 35px - 35px * -0.729) calc(30px + 35px * 0.685),
+      calc(0% + 35px - 35px * -0.809) calc(30px + 35px * 0.588),
+      calc(0% + 35px - 35px * -0.876) calc(30px + 35px * 0.482),
+      calc(0% + 35px - 35px * -0.93) calc(30px + 35px * 0.368),
+      calc(0% + 35px - 35px * -0.969) calc(30px + 35px * 0.249),
+      calc(0% + 35px - 35px * -0.992) calc(30px + 35px * 0.125),
+      calc(0% + 35px - 35px * -1) calc(30px + 35px * 0),
+      100% calc(30px)
+    );
+  }
+}
+
+/* iPhoneX */
+@media only screen and (min-width: 375px) and (max-width: 414px) and (orientation: portrait) {
+  .Text {
+    font-size: 1.2em;
+  }
+}

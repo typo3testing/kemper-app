@@ -1,0 +1,92 @@
+.Background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+}
+
+.Canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-user-drag: none;
+  overflow: hidden;
+}
+
+.BackgroundOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.noClick.BackgroundOverlay {
+  pointer-events: none;
+}
+
+.ObjectInfo {
+  z-index: 40;
+}
+
+.Toolbar {
+  z-index: 50;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.RoomPicker {
+  position: absolute;
+  right: calc(78px + 80px);
+  left: calc(78px + 80px);
+  bottom: 0;
+  top: auto;
+  max-height: 90%;
+  z-index: 10;
+  transition: 0.5s cubic-bezier(0.38, 1.38, 0.73, 0.98);
+  transition-property: transform, opacity;
+}
+
+.RoomPicker.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media only screen and (orientation: portrait) and (min-height: 736px) {
+  .RoomPicker {
+    right: 40px;
+    left: 40px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .RoomPicker {
+    right: calc((100vh / 4 - 30px) * 1.5 + 44px);
+    left: calc((100vh / 4 - 30px) * 1.5 + 44px);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .RoomPicker {
+    right: calc(60px * 0.5 + 24px);
+    left: calc(60px * 0.5 + 24px);
+    top: 31%;
+  }
+}
+
+/* iPhoneX */
+@media only screen and (min-width: 375px) and (orientation: landscape) {
+  .RoomPicker {
+    left: 25%;
+    right: 25%;
+  }
+}

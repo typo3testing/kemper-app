@@ -1,0 +1,25 @@
+.TrackingLost {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+  font-size: 1.2em;
+  height: 78px;
+  border-radius: 78px;
+  padding: 0 2em;
+  line-height: 1.1em;
+}
+
+.isHidden.TrackingLost {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.TrackingLost > span {
+  line-height: inherit;
+}

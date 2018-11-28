@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.672 31.888">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #c5d7e2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_1890" data-name="Group 1890" transform="translate(1 1)">
+    <path id="Path_387" data-name="Path 387" class="cls-1" d="M628.73,246.037h31.4a3.361,3.361,0,0,0,3.361-3.361v-26.5l-31.805.148v26.478" transform="translate(-624.818 -216.18)"/>
+    <path id="Path_388" data-name="Path 388" class="cls-1" d="M616.045,217.41l-.025,26.078a3.432,3.432,0,1,0,6.863,0" transform="translate(-616.02 -217.031)"/>
+    <rect id="Rectangle_314" data-name="Rectangle 314" class="cls-1" width="8.965" height="10.963" transform="translate(10.507 9.239)"/>
+    <line id="Line_73" data-name="Line 73" class="cls-1" x2="11.021" transform="translate(23.895 9.239)"/>
+    <line id="Line_74" data-name="Line 74" class="cls-1" x2="11.021" transform="translate(23.895 12.893)"/>
+    <line id="Line_75" data-name="Line 75" class="cls-1" x2="11.021" transform="translate(23.895 16.549)"/>
+    <line id="Line_76" data-name="Line 76" class="cls-1" x2="11.021" transform="translate(23.895 20.202)"/>
+    <line id="Line_77" data-name="Line 77" class="cls-1" x2="13.484" transform="translate(15.989 25.496)"/>
+    <line id="Line_78" data-name="Line 78" class="cls-1" x2="23.274" transform="translate(11.305 4.555)"/>
+    <line id="Line_79" data-name="Line 79" class="cls-1" y2="21.849" transform="translate(3.573 4.041)"/>
+  </g>
+</svg>

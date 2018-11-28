@@ -1,0 +1,7 @@
+.Container {
+  width: 20px;
+  height: 32px;
+  background: url("../../../assets/images/icons/pin.png") center / contain
+    no-repeat;
+  cursor: pointer;
+}

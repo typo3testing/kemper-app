@@ -1,0 +1,37 @@
+.Container {
+}
+
+.Content {
+  display: flex;
+  flex-flow: column;
+}
+
+.Playables {
+  flex: 1 1 auto;
+  flex-flow: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.Playable {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1.5em;
+  border-bottom: 1px solid;
+  padding: 10px 20px 10px 0;
+}
+
+.Name {
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Playable .Control {
+  margin: 0 0 0 10px;
+  height: calc(1em + 10px);
+  width: calc(1em + 10px);
+  flex: 0 0 auto;
+}

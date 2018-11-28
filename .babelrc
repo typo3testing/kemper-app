@@ -1,0 +1,19 @@
+{
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "modules": "commonjs",
+//        "targets": {
+//          "browsers": ["last 2 Chrome versions"]
+//        },
+        "plugins": [
+          "react-hot-loader/babel",
+          "syntax-dynamic-import",
+          ["transform-imports", {}] //add potential libraries to treeshake
+        ]
+      }
+    ]
+  ]
+}

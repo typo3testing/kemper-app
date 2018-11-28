@@ -1,0 +1,133 @@
+.Container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Info {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 7%;
+  font-size: 2em;
+  text-align: center;
+}
+
+.Logo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 74%;
+  height: 7%;
+}
+
+.Logo2 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 7%;
+}
+
+.ButtonBar {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  bottom: 0px;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+}
+
+.BottomLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(10% + 1px);
+  z-index: 10;
+}
+
+.ButtonSeparator {
+  flex: 0 0 5%;
+  position: relative;
+}
+
+.ButtonSeparator > div {
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  width: calc(100% + 2px);
+  height: calc(100% - 50px);
+}
+
+.ButtonSeparator:last-child,
+.ButtonSeparator:first-child {
+  flex: 1 0 auto;
+}
+
+.HeaderBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 20;
+}
+
+@media only screen and (orientation: portrait) and (min-height: 736px) {
+  .ButtonSeparator > div {
+    height: calc(100% - 7vw);
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .ButtonAuth {
+    right: 16px;
+  }
+
+  .ButtonSeparator {
+    flex: 0 0 10%;
+  }
+
+  .ButtonSeparator > div {
+    height: calc(100% - 10vh);
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .ButtonBar {
+    bottom: 0px;
+  }
+
+  .BottomLine {
+    height: calc(3% + 1px);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px) {
+  .ButtonAuth {
+    right: 10px;
+  }
+
+  .ButtonSeparator {
+    flex: 0 0 4%;
+  }
+
+  .ButtonSeparator > div {
+    height: calc(100% - 30px);
+  }
+
+  .Logo {
+    top: 42%;
+    width: 60%;
+  }
+}

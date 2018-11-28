@@ -1,0 +1,303 @@
+.Container {
+}
+
+.Button {
+  margin-top: 0;
+}
+
+.HeaderBar,
+.Configurator,
+.ProductInfo,
+.ScreenshotOverlay,
+.ShoppingCart,
+.HelpOverlay,
+.ToolbarSelection,
+.ProductPickerButton,
+.Button {
+  transition: 0.5s cubic-bezier(0.38, 1.38, 0.73, 0.98);
+  transition-property: transform, opacity;
+}
+
+.ButtonShareSend {
+  transform: translate(calc((78px + 40px) * 2), calc(-78px - 40px));
+}
+
+.ButtonShareShare {
+  transform: translate(calc(78px + 40px), calc(78px + 40px));
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hidden.HeaderBar {
+  transform: translateY(-100%);
+}
+
+.hidden.ButtonScreenshot {
+  transform: translateY(calc(78px * 1.5));
+}
+
+.hidden.ButtonShoppingCart {
+  transform: translateY(calc(78px * 3));
+}
+
+.hidden.ButtonSaveProject {
+  transform: translateY(calc(78px * 4.5));
+}
+
+.hidden.ProductPickerButton {
+  transform: translateX(calc(78px * 1.5));
+}
+
+.hidden.ButtonShareShare {
+  transform: translateX(calc(78px + 40px));
+}
+
+.hidden.ButtonShareSend {
+  transform: translateX(calc((78px + 40px) * 2));
+}
+
+.hidden.ButtonDelete,
+.hidden.ButtonInfo,
+.hidden.ButtonPlayback,
+.hidden.ButtonConfigurator {
+  transform: translateX(calc(78px * -1.5));
+}
+
+.hidden.ToolbarSelection {
+  transform: translateX(-100%);
+}
+
+.ProductPickerButton {
+  position: absolute;
+  right: calc(78px + 40px);
+  bottom: 0;
+  z-index: 30;
+}
+
+.ProductPicker {
+  position: absolute;
+  right: calc(78px * 1.5 + 80px);
+  left: calc(78px * 1.5 + 80px);
+  bottom: 0;
+  top: 15%;
+  z-index: 10;
+}
+
+.ConfiguratorPicker {
+  position: absolute;
+  bottom: 40px;
+  left: calc(78px * 1.5 + 120px);
+  right: calc(78px * 1.5 + 120px);
+}
+
+.ConfiguratorList {
+  position: absolute;
+  width: 33%;
+  left: calc((100vh / 4 - 30px) / 2 + 25px);
+  bottom: 0;
+  top: 15%;
+  z-index: 10;
+  height: auto !important;
+}
+
+.ConfiguratorWidget {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 30;
+}
+
+.ProductInfo {
+  position: absolute;
+  width: 50%;
+  left: calc(78px / 2 + 40px);
+  bottom: 0;
+  top: 15%;
+  z-index: 10;
+}
+
+.PlaybackControls {
+  position: absolute;
+  width: 50%;
+  left: calc(78px / 2 + 40px);
+  bottom: 0;
+  top: 15%;
+  z-index: 10;
+}
+
+.ScreenshotOverlay {
+  position: absolute;
+  z-index: -10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.ShareButton {
+  margin-right: 0;
+}
+
+@media only screen and (orientation: portrait) and (min-height: 736px) {
+  .ProductPicker {
+    left: calc(78px * 0.5 + 40px);
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .ProductPickerButton {
+    right: calc(100vh / 4 - 50px + 40px);
+  }
+
+  .ProductPicker {
+    right: calc((100vh / 4 - 30px) * 1.5 + 44px);
+    left: calc((100vh / 4 - 30px) * 1.5 + 44px);
+    top: calc(100% - 369px);
+  }
+
+  .ProductInfo {
+    left: calc((100vh / 4 - 30px) / 2 + 25px);
+    top: 31%;
+  }
+
+  .PlaybackControls {
+    top: auto;
+    max-height: 91%;
+    left: calc((100vh / 4 - 30px) / 2 + 25px);
+  }
+
+  .ConfiguratorPicker {
+    bottom: 24px;
+  }
+
+  .ButtonShareShare {
+    transform: translate(
+      calc((100vh / 4 - 30px + 25px) * 1),
+      calc((100vh / 4 - 30px + 25px) * 1)
+    );
+  }
+
+  .ButtonShareSend {
+    transform: translate(
+      calc((100vh / 4 - 30px + 25px) * 2),
+      calc((100vh / 4 - 30px + 25px) * -1)
+    );
+  }
+
+  .hidden.ButtonScreenshot {
+    transform: translateY(calc((100vh / 4 - 30px + 25px) * 1));
+  }
+
+  .hidden.ButtonShoppingCart {
+    transform: translateY(calc((100vh / 4 - 30px + 25px) * 2));
+  }
+
+  .hidden.ButtonSaveProject {
+    transform: translateY(calc((100vh / 4 - 30px + 25px) * 3));
+  }
+
+  .hidden.ProductPickerButton {
+    transform: translateX(calc((100vh / 4 - 30px + 25px)));
+  }
+
+  .hidden.ButtonShareShare {
+    transform: translateX(calc((100vh / 4 - 30px + 25px) * 1));
+  }
+
+  .hidden.ButtonShareSend {
+    transform: translateX(calc((100vh / 4 - 30px + 25px) * 2));
+  }
+
+  .hidden.ButtonDelete,
+  .hidden.ButtonInfo,
+  .hidden.ButtonPlayback,
+  .hidden.ButtonConfigurator {
+    transform: translateX(calc(- (100vh / 4 - 30px + 25px)));
+  }
+
+  .ConfiguratorPicker {
+    left: calc((100vh / 4 - 30px) + 75px + 14px);
+    right: calc((100vh / 4 - 30px) + 75px + 14px);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .ProductPickerButton {
+    right: 0;
+  }
+
+  .ProductPicker {
+    position: absolute;
+    right: calc(60px * 0.5 + 24px);
+    left: calc(60px * 0.5 + 24px);
+    top: 31%;
+  }
+
+  .Menu {
+    bottom: calc(60px + 24px);
+  }
+
+  .ConfiguratorPicker {
+    left: calc(60px + 48px);
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .ConfiguratorWidget {
+    left: 0;
+    right: 0;
+    bottom: calc(60px + 24px);
+    top: auto;
+    height: 60px;
+  }
+
+  .ProductInfo {
+    left: calc(24px + 30px);
+    right: calc(24px + 30px);
+    top: 31%;
+    width: auto;
+  }
+
+  .PlaybackControls {
+    left: calc(24px + 30px);
+    right: calc(24px + 30px);
+    top: auto;
+    max-height: 69%;
+    width: auto;
+  }
+
+  .ButtonShareSend {
+    display: inherit;
+    transform: translate(calc((24px + 60px) * 2), calc((24px + 60px) * 2));
+  }
+
+  .ButtonShareShare {
+    transform: translate(calc((24px + 60px) * 1), calc((24px + 60px) * 1));
+  }
+
+  .hidden.ButtonScreenshot {
+    transform: translateY(calc((24px + 60px) * 1));
+  }
+
+  .hidden.ButtonShoppingCart {
+    transform: translateY(calc((24px + 60px) * 2));
+  }
+
+  .hidden.ButtonSaveProject {
+    transform: translateY(calc((24px + 60px) * 3));
+  }
+
+  .hidden.ButtonShareSend {
+    transform: translateX(calc((24px + 60px) * 2));
+  }
+
+  .hidden.ButtonShareShare {
+    transform: translateX(calc((24px + 60px) * 1));
+  }
+}

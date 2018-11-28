@@ -1,0 +1,140 @@
+.Container {
+  position: fixed;
+  width: initial;
+  bottom: 0;
+  max-height: calc(90%);
+  right: calc(78px * 1.5 + 80px);
+  left: calc(78px * 1.5 + 80px);
+  z-index: 10;
+}
+
+.Container .Content {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+  border-radius: 15px 15px 0 0;
+  overflow-y: auto;
+}
+
+.Scrollable {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.Container .ProductImage {
+  border: 0;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 250px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.Container .Button {
+  width: 140px;
+  margin: 6px auto;
+  height: 1.2em;
+  font-size: 1em;
+}
+
+.ButtonBack {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ButtonInsert {
+}
+
+.ButtonCheckout {
+}
+
+.ArticleNumber {
+  text-align: center;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.Details {
+  margin: 6px 0;
+}
+
+.MeasuresMaterialContainer {
+  display: flex;
+}
+
+.Materials,
+.Measures {
+  flex: 0 0 50%;
+}
+
+.Measures {
+  display: flex;
+  flex-flow: column;
+}
+
+.Measure {
+  display: flex;
+  font-size: 1.1em;
+  margin-top: 6px;
+}
+
+.MeasureLabel {
+  flex: 1 0 auto;
+}
+
+.MeasureValue {
+}
+
+.Materials {
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+
+.Material {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 6px 6px 0;
+}
+
+.OldPrice {
+  color: grey;
+  text-decoration: line-through;
+  margin-top: 12px;
+}
+
+.Price {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.OfferValidity {
+  font-size: 0.8em;
+  color: red;
+  margin-top: 8px;
+}
+
+@media only screen and (orientation: portrait) and (min-height: 736px) {
+  .Container {
+    left: calc(78px * 0.5 + 40px);
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .Container {
+    right: calc((100vh / 4 - 30px) * 1.5 + 44px);
+    left: calc((100vh / 4 - 30px) * 1.5 + 44px);
+    top: 10%;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .Container {
+    right: calc(60px * 0.5 + 24px);
+    left: calc(60px * 0.5 + 24px);
+  }
+}

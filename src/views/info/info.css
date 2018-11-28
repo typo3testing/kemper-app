@@ -1,0 +1,73 @@
+.Container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.ColorUnderlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
+}
+
+.Info {
+  top: calc(48px + 32px);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-flow: column;
+  font-size: 1.4em;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+.Logo {
+  width: 15%;
+  background: url("../../../assets/images/viewar_logo.svg") center / contain
+    no-repeat;
+}
+
+.Logo:before {
+  content: "";
+  padding-bottom: 30%;
+  float: left;
+}
+
+.Info h1 {
+  font-size: 0.8em;
+}
+
+.Info p {
+  line-height: 1.1em;
+}
+
+.Info a,
+.Info a:visited {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.VersionInfo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .Logo {
+    width: 35%;
+  }
+}

@@ -1,0 +1,9 @@
+.Container {
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .ButtonSeparator {
+    flex: 0 0 17%;
+  }
+}

@@ -1,0 +1,291 @@
+.Container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  font-size: 1.5em;
+}
+
+.ButtonContainer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+.Button {
+  text-align: center;
+  padding: 0 2rem;
+  margin: 16px 16px 0 16px;
+  background: white;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 1.5rem;
+  z-index: 150;
+}
+
+.Button.active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.InteractionContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+}
+
+.InteractionMessage {
+  display: flex;
+  align-items: center;
+  max-width: calc(100% - 7rem);
+}
+
+.InteractionHelp {
+  margin: 0 0 10px 0;
+  display: flex;
+}
+
+.InteractionHelp:last-child {
+  margin: 0;
+}
+
+.InteractionHelp .Image {
+  height: 7rem;
+  width: 7rem;
+  background: center / contain no-repeat;
+  margin: 0 10px 0 0;
+}
+
+.InteractionHelp.OneFinger .Image {
+  background-image: url("../../../assets/images/animations/geste_move.gif");
+}
+
+.InteractionHelp.TwoFingers .Image {
+  background-image: url("../../../assets/images/animations/geste_rotate.gif");
+}
+
+.InteractionHelp.ThreeFingers .Image {
+  background-image: url("../../../assets/images/animations/geste_up_down.gif");
+}
+
+.InteractionHelp.MouseMovement .Image {
+  background-image: url("../../../assets/images/animations/icons_mouse_movement.gif");
+  background-size: 60%;
+}
+
+.InteractionHelp.MouseUp .Image {
+  background-image: url("../../../assets/images/animations/icons_mouse_up.gif");
+  background-size: 60%;
+}
+
+.InteractionHelp.MouseRotate .Image {
+  background-image: url("../../../assets/images/animations/icons_mouse_rotate.gif");
+  background-size: 60%;
+}
+
+.Help {
+  position: absolute;
+  display: flex;
+}
+
+.Help.left,
+.Help.right {
+  height: 48px;
+  align-items: center;
+}
+
+.Help.left {
+  flex-flow: row-reverse;
+}
+
+.Help.top {
+  transform: translateX(50%);
+  flex-flow: column-reverse;
+  align-items: center;
+}
+
+.Help.left .Line,
+.Help.right .Line {
+  width: 20px;
+  height: 1em;
+  margin: 0 10px;
+  background: url("../../../assets/images/white_pixel.png") left center repeat-x;
+}
+
+.Help.top .Line {
+  width: 1em;
+  height: 20px;
+  margin: 10px 0;
+  background: url("../../../assets/images/white_pixel.png") center bottom
+    repeat-y;
+}
+
+.Help.top .Message {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.Message {
+}
+
+.Help.Back {
+  left: calc(48px + 16px);
+  top: 16px;
+}
+
+.Help.Menu {
+  right: calc(78px / 2 + 40px);
+  bottom: calc(78px + 40px);
+}
+
+.Help.AddProduct {
+  height: 78px;
+  right: calc(78px * 2 + 80px);
+  top: calc(100vh - (78px + 40px));
+}
+
+.Help.MenuItem {
+  height: 78px;
+  right: calc(78px + 40px);
+}
+
+.Help.MenuItem.MenuItem-position0 {
+  top: calc(100vh - (78px + 40px) * 2);
+}
+
+.Help.MenuItem.MenuItem-position1 {
+  top: calc(100vh - (78px + 40px) * 3);
+}
+
+.Help.MenuItem.MenuItem-position2 {
+  top: calc(100vh - (78px + 40px) * 4);
+}
+
+@media only screen and (max-height: 736px) {
+  .Container {
+    font-size: 1.2em;
+  }
+
+  .Button {
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 1.5rem;
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .Help.left,
+  .Help.right {
+    height: calc(100vh / 4 - 30px);
+  }
+
+  .Help.Back {
+    height: calc(7vh + 32px);
+    left: calc(7vh + 16px);
+    top: 0;
+  }
+
+  .Help.AddProduct {
+    right: calc((100vh / 4 - 30px) * 2 + 48px);
+    top: calc(100vh - (100vh / 4 - 30px + 24px));
+  }
+
+  .Help.Menu {
+    right: calc((100vh / 4 - 30px) * 0.5 + 24px);
+    bottom: calc(100vh / 4 - 30px + 24px);
+  }
+
+  .Help.MenuItem {
+    right: calc(100vh / 4 - 30px + 24px);
+  }
+
+  .Help.MenuItem.MenuItem-position0 {
+    top: calc(100vh - (100vh / 4 - 30px + 24px) * 2);
+  }
+
+  .Help.MenuItem.MenuItem-position1 {
+    top: calc(100vh - (100vh / 4 - 30px + 24px) * 3);
+  }
+
+  .Help.MenuItem.MenuItem-position2 {
+    top: calc(100vh - (100vh / 4 - 30px + 24px) * 4);
+  }
+
+  .Help.Info,
+  .Help.Configure,
+  .Help.Delete {
+    left: calc(100vh / 4 - 30px + 25px);
+  }
+
+  .Help.Info {
+    top: calc(100vh - (100vh / 4 - 30px + 24px) * 1);
+  }
+
+  .Help.Configure {
+    top: calc(100vh - (100vh / 4 - 30px + 24px) * 2);
+  }
+
+  .Help.Delete {
+    top: calc(100vh - (100vh / 4 - 30px + 24px) * 3);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .InteractionContainer {
+    width: 70%;
+    box-sizing: border-box;
+  }
+
+  .Button {
+    margin: 16px 24px 0 24px;
+  }
+
+  .Button:first-child {
+    margin-top: 10px;
+  }
+
+  .Help.Back {
+    left: calc(32px + 10px);
+    top: 10px;
+    height: 32px;
+  }
+
+  .Help.AddProduct {
+    height: 60px;
+    right: calc(60px + 24px);
+    top: calc(100vh - 24px - 60px);
+  }
+
+  .Help.Menu {
+    right: calc(24px + 60px / 2);
+    bottom: calc((60px + 24px) * 2);
+  }
+
+  .Help.MenuItem {
+    height: 60px;
+    right: calc(60px + 24px);
+  }
+
+  .Help.MenuItem.MenuItem-position0 {
+    top: calc(100vh - (60px + 24px) * 3);
+  }
+
+  .Help.MenuItem.MenuItem-position1 {
+    top: calc(100vh - (60px + 24px) * 4);
+  }
+
+  .Help.MenuItem.MenuItem-position2 {
+    top: calc(100vh - (60px + 24px) * 5);
+  }
+}

@@ -1,0 +1,309 @@
+.Container {
+  position: absolute;
+  right: calc(78px * 0.5 + 40px);
+  left: calc(78px * 0.5 + 40px);
+  top: 15%;
+  bottom: 0;
+  display: flex;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.DetailHeader {
+  display: flex;
+  align-items: center;
+}
+
+.Title {
+  flex: 1 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ButtonShare {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 0;
+}
+
+.Empty {
+  font-size: 1.6em;
+}
+
+.ItemsContainer {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.Items {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.Item {
+  position: relative;
+  display: flex;
+  padding: 0 0 40px 0;
+  border-bottom: 1px solid;
+  margin: 30px 0 0 0;
+  font-size: 1.3em;
+}
+
+.Item:last-child {
+  border-bottom: 0;
+}
+
+.ContentWrapper {
+  display: flex;
+  flex: 0 0 50%;
+}
+
+.Content {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+.Item .Image {
+  flex: 0 0 calc(50% - 16px);
+  border-color: grey;
+  margin: 0 16px 0 0;
+}
+
+.Item .Details {
+  flex: 0 0 calc(50% - 16px);
+  margin-right: 16px;
+  display: flex;
+  flex-flow: column;
+}
+
+.Item .ProductName {
+  flex: 0 0 auto;
+  font-size: 1.1em;
+  max-height: 2em;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+.Item .ArticleNumber {
+  flex: 0 0 auto;
+  font-size: 1.1em;
+}
+
+.Item .Amount {
+  flex: 1 0 auto;
+  display: flex;
+  position: relative;
+  width: 9rem;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.Item .Amount .Add,
+.Item .Amount .Remove,
+.Item .Amount .Number {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  box-sizing: border-box;
+}
+
+.Item .Amount .Number {
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+}
+
+.Item .Amount .Filler {
+  flex: 1 0 auto;
+}
+
+.Item .Amount .Number {
+  line-height: calc(2.5rem - 4px);
+  text-align: center;
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  border-radius: 1.25rem;
+}
+
+.Item .Amount .Add,
+.Item .Amount .Remove {
+  width: 2.5rem;
+  margin: 0;
+  z-index: 20;
+}
+
+.Item .Properties {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-self: flex-start;
+}
+
+.Item .Property {
+  flex: 0 0 50%;
+  display: flex;
+  flex-flow: column;
+  padding: 0 20px 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 0 0.3em 0;
+}
+
+.Item .Property .Value,
+.Item .Property .Name .Colon,
+.Item .Property .Name .Key {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.1em;
+}
+
+.Item .Property .Name {
+  display: flex;
+}
+
+.Item .Property .Name .Key {
+  flex: 0 1 auto;
+}
+
+.Item .Property .Name .Colon {
+  flex: 0 0 auto;
+}
+
+.Item .Price {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  padding: 0 3px 0 20px;
+}
+
+.DetailFooter {
+  display: flex;
+  font-size: 1.5em;
+  align-items: center;
+}
+
+.TotalSum {
+  flex: 1 0 auto;
+  text-align: right;
+  height: 4rem;
+  line-height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.TotalSumValue {
+  margin-right: 4px;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .Container {
+    right: calc((100vh / 4 - 30px) * 0.5 + 25px);
+    left: calc((100vh / 4 - 30px) * 0.5 + 25px);
+    top: 10%;
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .Container {
+    right: calc(60px * 0.5 + 24px);
+    left: calc(60px * 0.5 + 24px);
+    top: 31%;
+    font-size: 0.9em;
+  }
+
+  .Item {
+    flex-flow: column;
+    padding: 0 0 20px 0;
+    margin: 20px 0 0 0;
+  }
+
+  .ContentWrapper {
+    margin-bottom: 16px;
+  }
+
+  .Container .DetailContainer-gap3 {
+    /* Overwrite gap position because of menu offset. */
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      calc(100% + (36px) * 0) calc(100% - (306px + (36px) * 1)),
+      calc(100% + (36px) * -0.165) calc(100% - (306px + (36px) * 0.986)),
+      calc(100% + (36px) * -0.325) calc(100% - (306px + (36px) * 0.946)),
+      calc(100% + (36px) * -0.476) calc(100% - (306px + (36px) * 0.879)),
+      calc(100% + (36px) * -0.614) calc(100% - (306px + (36px) * 0.789)),
+      calc(100% + (36px) * -0.736) calc(100% - (306px + (36px) * 0.677)),
+      calc(100% + (36px) * -0.837) calc(100% - (306px + (36px) * 0.547)),
+      calc(100% + (36px) * -0.916) calc(100% - (306px + (36px) * 0.402)),
+      calc(100% + (36px) * -0.969) calc(100% - (306px + (36px) * 0.245)),
+      calc(100% + (36px) * -0.997) calc(100% - (306px + (36px) * 0.083)),
+      calc(100% + (36px) * -0.997) calc(100% - (306px + (36px) * -0.083)),
+      calc(100% + (36px) * -0.969) calc(100% - (306px + (36px) * -0.245)),
+      calc(100% + (36px) * -0.916) calc(100% - (306px + (36px) * -0.402)),
+      calc(100% + (36px) * -0.837) calc(100% - (306px + (36px) * -0.547)),
+      calc(100% + (36px) * -0.736) calc(100% - (306px + (36px) * -0.677)),
+      calc(100% + (36px) * -0.614) calc(100% - (306px + (36px) * -0.789)),
+      calc(100% + (36px) * -0.476) calc(100% - (306px + (36px) * -0.879)),
+      calc(100% + (36px) * -0.325) calc(100% - (306px + (36px) * -0.946)),
+      calc(100% + (36px) * -0.165) calc(100% - (306px + (36px) * -0.986)),
+      calc(100% + (36px) * 0) calc(100% - (306px + (36px) * -1)),
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  .Container .DetailContainer-gap2 {
+    /* Overwrite gap position because of menu offset. */
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      calc(100% + (36px) * 0) calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 1)),
+      calc(100% + (36px) * -0.165)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.986)),
+      calc(100% + (36px) * -0.325)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.946)),
+      calc(100% + (36px) * -0.476)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.879)),
+      calc(100% + (36px) * -0.614)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.789)),
+      calc(100% + (36px) * -0.736)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.677)),
+      calc(100% + (36px) * -0.837)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.547)),
+      calc(100% + (36px) * -0.916)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.402)),
+      calc(100% + (36px) * -0.969)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.245)),
+      calc(100% + (36px) * -0.997)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * 0.083)),
+      calc(100% + (36px) * -0.997)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.083)),
+      calc(100% + (36px) * -0.969)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.245)),
+      calc(100% + (36px) * -0.916)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.402)),
+      calc(100% + (36px) * -0.837)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.547)),
+      calc(100% + (36px) * -0.736)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.677)),
+      calc(100% + (36px) * -0.614)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.789)),
+      calc(100% + (36px) * -0.476)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.879)),
+      calc(100% + (36px) * -0.325)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.946)),
+      calc(100% + (36px) * -0.165)
+        calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -0.986)),
+      calc(100% + (36px) * 0) calc(100% - (60px * 2.5 + 24px * 3 + (36px) * -1)),
+      100% 100%,
+      0% 100%
+    );
+  }
+}

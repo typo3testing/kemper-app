@@ -1,0 +1,1683 @@
+@import "fonts.css";
+
+body {
+  font-weight: 300;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: #282f39;
+  position: fixed;
+}
+
+* {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0) !important;
+  outline: none !important;
+  font-size: inherit;
+  line-height: 1em;
+
+  user-select: none;
+}
+
+.CustomFont1 {
+  font-family: "CustomFont1", sans-serif;
+}
+
+.CustomFont2 {
+  font-family: "CustomFont2", sans-serif;
+}
+
+.CustomFont3 {
+  font-family: "CustomFont3", sans-serif;
+}
+
+#app {
+  position: absolute;
+}
+
+input,
+textarea {
+  border: 0;
+  user-select: text;
+}
+
+a,
+a:visited {
+  color: #bd1819;
+  text-decoration: none;
+}
+
+.ViewContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Background {
+  background: center / cover no-repeat;
+  background-image: url("../assets/images/viewar_background.jpg");
+}
+
+.Background.BackgroundImage {
+  background-image: url("../assets/images/viewar_background.jpg");
+}
+
+.BackgroundImage.BackgroundColor {
+  background-color: white;
+}
+
+.Logo {
+  background: center / contain no-repeat;
+  background-image: url("../assets/images/app-logo.svg");
+}
+
+.BackgroundDark {
+  background-color: #282f39;
+}
+
+.ColorDark {
+  color: #282f39;
+}
+
+.BorderDark {
+  border-color: #282f39;
+}
+
+.BackgroundBright {
+  background-color: white;
+}
+
+.ColorBright {
+  color: white;
+}
+
+.BorderBright {
+  border-color: white;
+}
+
+.ColorHighlight {
+  color: #bd1819;
+}
+
+.ButtonImage {
+  /*-webkit-mask-position: top left;*/
+  -webkit-mask-size: 800%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-image: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.Button {
+  border-radius: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.ButtonBackground {
+}
+
+.TextButtonBackground {
+}
+
+.Button:last-child {
+  margin-right: 0;
+}
+
+.SwitchWrapper {
+  position: relative;
+  transition: opacity 5s linear;
+}
+
+.SwitchWrapper > div {
+  position: absolute;
+}
+
+.ButtonColor1 {
+  background-color: white;
+}
+
+.ButtonColor2 {
+  background-color: #282f39;
+}
+
+.ButtonColor3 {
+  background-color: transparent;
+}
+
+.ButtonTextColor {
+  color: white;
+}
+
+.ButtonTextColorEdge {
+  color: #282f39;
+}
+
+.ButtonBarColorEdge {
+  background-color: transparent;
+}
+
+.ButtonBarColor {
+  background-color: green;
+  display: none;
+}
+
+.OverlayBackgroundColor {
+  background-color: rgba(40, 47, 57, 0.5);
+}
+
+.OverlayTextColor {
+  color: white;
+}
+
+.InfoBoxColor {
+  background-color: white;
+}
+
+.InfoBoxTextColor {
+  color: rgb(40, 47, 57);
+}
+
+.ContentBoxColor {
+  background-color: white;
+}
+
+.ContentBoxTextColor {
+  color: rgb(40, 47, 57);
+}
+
+.ButtonBar {
+  background-color: var(--site-white-color);
+  height: 80px;
+  z-index: 10;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px) {
+  .DetailHeader {
+    padding: 16px;
+  }
+
+  .DetailContent {
+    padding: 16px;
+  }
+}
+
+/*custom style*/
+:root {
+  --site-white-color: #fff;
+  --site-text-color: #798791;
+  --site-darker-white: #f8f4ea;
+  --background-color-type-one: #f2f5f7;
+  --site-primary: #005192;
+  --site-primary-light: #f2f5f7;
+  --site-dark: #6a818e;
+  --site-success: #2fdc64;
+  --primary-font-bold: "HelveticaNeue-bold";
+  --primary-font-light: "HelveticaNeue-light";
+  --primary-font-medium: "HelveticaNeue-medium";
+  --primary-font-regular: "HelveticaNeue-regular";
+}
+
+@font-face {
+  font-family: "HelveticaNeue-regular";
+  src: url("../assets/fonts/custom/HelveticaNeue Regular.eot");
+  src: url("../assets/fonts/custom/HelveticaNeue Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/custom/HelveticaNeue Regular.woff2") format("woff2"),
+    url("../assets/fonts/custom/HelveticaNeue Regular.woff") format("woff"),
+    url("../assets/fonts/custom/HelveticaNeue Regular.svg#HelveticaNeue Regular")
+      format("svg");
+  font-weight: 5;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-0303;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-bold";
+  src: url("../assets/fonts/custom/HelveticaNeue Bold.eot");
+  src: url("../assets/fonts/custom/HelveticaNeue Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/custom/HelveticaNeue Bold.woff2") format("woff2"),
+    url("../assets/fonts/custom/HelveticaNeue Bold.woff") format("woff"),
+    url("../assets/fonts/custom/HelveticaNeue Bold.svg#HelveticaNeue Bold")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-02DC;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-heavy";
+  src: url("../assets/fonts/custom/HelveticaNeue Heavy.eot");
+  src: url("../assets/fonts/custom/HelveticaNeue Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/custom/HelveticaNeue Heavy.woff2") format("woff2"),
+    url("../assets/fonts/custom/HelveticaNeue Heavy.woff") format("woff"),
+    url("../assets/fonts/custom/HelveticaNeue Heavy.svg#HelveticaNeue Heavy")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-02DC;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-light";
+  src: url("../assets/fonts/custom/HelveticaNeue Light.eot");
+  src: url("../assets/fonts/custom/HelveticaNeue Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/custom/HelveticaNeue Light.woff2") format("woff2"),
+    url("../assets/fonts/custom/HelveticaNeue Light.woff") format("woff"),
+    url("../assets/fonts/custom/HelveticaNeue Light.svg#HelveticaNeue Light")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-02DC;
+}
+
+@font-face {
+  font-family: "HelveticaNeue-medium";
+  src: url("../assets/fonts/custom/HelveticaNeue Medium.eot");
+  src: url("../assets/fonts/custom/HelveticaNeue Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/custom/HelveticaNeue Medium.woff2") format("woff2"),
+    url("../assets/fonts/custom/HelveticaNeue Medium.woff") format("woff"),
+    url("../assets/fonts/custom/HelveticaNeue Medium.svg#HelveticaNeue Medium")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-02DC;
+}
+
+@font-face {
+  font-family: "Heiti SC Medium";
+  src: url("../assets/fonts/custom/Heiti SC Medium.eot");
+  src: url("../assets/fonts/custom/Heiti SC Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/custom/Heiti SC Medium.woff2") format("woff2"),
+    url("../assets/fonts/custom/Heiti SC Medium.woff") format("woff"),
+    url("../assets/fonts/custom/Heiti SC Medium.svg#Heiti SC Medium")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FC;
+}
+
+.PrimaryTextColor,
+.PrimaryTextColor * {
+  color: var(--site-primary) !important;
+}
+
+.CustomLoading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  pointer-events: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/icons/loader.svg");
+  background-size: 180px;
+  font-size: 16px;
+  color: var(--site-primary);
+  font-family: var(--primary-font-medium);
+}
+
+.CustomHidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.Clearfix:before,
+.Clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.Clearfix:after {
+  clear: both;
+}
+
+.Clear {
+  clear: both;
+}
+
+.GlobalLeftAlignElements {
+  float: left !important;
+  text-align: left !important;
+}
+
+.GlobalRightAlignElements {
+  float: right !important;
+  text-align: right !important;
+}
+
+.Appheader {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: var(--site-white-color);
+  z-index: 5;
+}
+
+.AppContentArea {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+
+.AppContentArea.AppContentAreaPadType2 {
+  padding: 30px 0 80px 0;
+}
+
+.AppContentArea.AppContentAreaPadType3 {
+  padding: 30px 0;
+}
+
+.AppContentArea.AppContentAreaNoPad {
+  padding: 0px;
+}
+
+.AppContentArea.NoAppheader {
+  padding-top: 0px;
+}
+
+.CustomBackgroundHolder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.ColoredBackgroundTypeOne {
+  background-color: var(--background-color-type-one);
+}
+
+.ImageBackground {
+}
+
+.ImageBackground .MainWrap {
+  background-image: url("../assets/images/viewar_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.ImageBackground.GotResultBG {
+  background-image: url("../assets/images/got-result-bg.jpg");
+}
+
+.MainWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: auto;
+}
+
+.MainContentHolder {
+  position: relative;
+  z-index: 1;
+}
+
+.MainContentHolder.AbsoluteBootomContentHolder {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+}
+
+.ContentPadTypeOne {
+  padding: 35px;
+}
+
+.ContentPadTypeTwo {
+  padding: 90px 35px;
+}
+
+.ContentPadTypeThree {
+  padding: 90px 25px;
+}
+
+.ContentPadTypeFour {
+  padding: 40px 25px;
+}
+
+.ContentPadTypeFive {
+  padding: 35px;
+}
+
+.ContentPadTypeSix {
+  padding: 45px 40px;
+}
+
+.ContentPadTypeSeven {
+  padding: 0 40px;
+}
+
+.ContentPadTypeEight {
+  padding: 30px 0;
+}
+
+.ContentPadTypeNine {
+  padding: 30px 40px 80px 40px;
+}
+
+.ContentPadTypeTen {
+  padding: 35px 20px;
+}
+
+.Entry p {
+  font-size: 17px;
+  line-height: 24px;
+  color: var(--site-text-color);
+  font-family: var(--primary-font-light);
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.Entry h1,
+.Entry h2,
+.Entry h3,
+.Entry h4,
+.Entry h5,
+.Entry h6 {
+  color: var(--site-primary);
+  font-family: var(--primary-font-bold);
+  line-height: normal;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+li:last-child {
+  margin-bottom: 0px !important;
+  margin-top: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li {
+  margin-top: 0px;
+}
+
+.Entry h1 {
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+
+.Entry h2 {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.Entry h3 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.Entry h4 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.Entry h5 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.Entry h6 {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.Element:last-child {
+  margin-bottom: 0px !important;
+}
+
+.Element.ElementGapMedium {
+  margin-bottom: 35px;
+}
+
+.PullTextCenter {
+  text-align: center;
+}
+
+.PullTextLeft {
+  text-align: left;
+}
+
+.PullTextRight {
+  text-align: right;
+}
+
+.BottomActionButtonHolder {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  left: 0px;
+  bottom: 60px;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV1 {
+  z-index: 1;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2 {
+  bottom: 0px;
+  box-sizing: border-box;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV3 {
+  position: inherit;
+  bottom: inherit;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV3.BottomActionButtonHolderV3Absolute {
+  position: absolute;
+  bottom: 0px;
+}
+
+.BottomActionButtonHolder span {
+  display: inline-block;
+  width: 105px;
+  height: 105px;
+  border-radius: 100%;
+  background-color: #fff;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0 19px;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2 span {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 15px;
+  width: 80px;
+  height: 80px;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV3 span {
+  margin-left: 13px;
+  margin-right: 13px;
+  margin-top: 10px;
+  width: 92px;
+  height: 92px;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2 span:first-child {
+  margin-top: 0px;
+}
+
+span.ActionButtonMeasure {
+  background-image: url("../assets/images/icons/measure-icon.svg");
+  background-size: 54px;
+}
+
+span.ActionButtonCrackPortion {
+  background-image: url("../assets/images/icons/crack-portion-icon.svg");
+  background-size: 57px;
+}
+
+span.ActionButtonSave {
+  background-image: url("../assets/images/icons/save-icon.svg");
+  background-size: 38px;
+}
+span.ActionButtonSave.disabled {
+  background-image: url("../assets/images/icons/save-icon-disabled.svg");
+}
+
+span.ActionButtonReset {
+  background-image: url("../assets/images/icons/reset-icon.svg");
+  background-size: 50px;
+}
+span.ActionButtonReset.disabled {
+  background-image: url("../assets/images/icons/reset-icon-disabled.svg");
+}
+
+span.ActionButtonCapture {
+  background-image: url("../assets/images/icons/capture-icon.svg");
+  background-size: 42px;
+}
+span.ActionButtonCapture.disabled {
+  background-image: url("../assets/images/icons/capture-icon-disabled.svg");
+}
+
+span.ActionButtonCalculate {
+  background-image: url("../assets/images/icons/calculator-icon-primary.svg");
+  background-size: 40px;
+}
+span.ActionButtonCalculate.disabled,
+span.ActionButtonCalculate.inactive {
+  background-image: url("../assets/images/icons/calculator-icon-secondary.svg");
+}
+
+span.ActionButtonLocation {
+  background-image: url("../assets/images/icons/location-icon-primary.svg");
+  background-size: 59px;
+}
+span.ActionButtonLocation.disabled,
+span.ActionButtonLocation.inactive {
+  background-image: url("../assets/images/icons/location-icon-secondary.svg");
+}
+
+span.ActionButtonTrash {
+  background-image: url("../assets/images/icons/trash-icon-primary.svg");
+  background-size: 44px;
+}
+span.ActionButtonTrash.disabled,
+span.ActionButtonTrash.inactive {
+  background-image: url("../assets/images/icons/trash-icon-secondary.svg");
+}
+
+span.ActionButtonCamera {
+  background-image: url("../assets/images/icons/camera.svg");
+  background-size: 50px;
+}
+
+span.ActionButtonDownload.disabled,
+span.ActionButtonDownload.inactive {
+  background-image: url("../assets/images/icons/download-icon-secondary.svg");
+  background-size: 46px;
+}
+
+span.ActionButtonEmail.disabled,
+span.ActionButtonEmail.inactive {
+  background-image: url("../assets/images/icons/email-button-secondary.svg");
+  background-size: 54px;
+}
+
+span.ActionButtonDelete.disabled,
+span.ActionButtonDelete.inactive {
+  background-image: url("../assets/images/icons/delete-icon-secondary.svg");
+  background-size: 44px;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2 .ActionButtonButtonType {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 15px;
+  width: 80px;
+  height: 80px;
+  background-size: 42px;
+  opacity: 1;
+  border: none;
+  border-radius: 100%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2
+  .ActionButtonButtonType.Reset {
+  background-image: url("../assets/images/icons/reset-icon.svg");
+  background-size: 50px;
+}
+.BottomActionButtonHolder.BottomActionButtonHolderV2
+  .ActionButtonButtonType.Reset.inactive {
+  background-image: url("../assets/images/icons/reset-icon-disabled.svg");
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2
+  .ActionButtonButtonType.Capture {
+  background-image: url("../assets/images/icons/capture-icon.svg");
+  background-size: 42px;
+}
+.BottomActionButtonHolder.BottomActionButtonHolderV2
+  .ActionButtonButtonType.Capture.inactive {
+  background-image: url("../assets/images/icons/capture-icon-disabled.svg");
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2
+  .ActionButtonButtonType.Save {
+  background-image: url("../assets/images/icons/save-icon.svg");
+  background-size: 38px;
+}
+.BottomActionButtonHolder.BottomActionButtonHolderV2
+  .ActionButtonButtonType.Save.inactive {
+  background-image: url("../assets/images/icons/save-icon-disabled.svg");
+}
+
+.BottomActionButtonHolder.BottomActionButtonHolderV2
+  .ActionButtonButtonType
+  > div {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ActionButtonPartArea {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 50%;
+}
+
+.Sitelogo {
+  height: 80px;
+}
+
+.Sitelogo img {
+  max-height: 32px;
+  width: auto;
+}
+
+.Appheader .Logo {
+  position: static;
+  top: inherit;
+  left: inherit;
+  transform: none;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.Tablewrap {
+  display: table;
+  width: 100%;
+  height: 100%;
+  table-layout: fixed;
+}
+
+.Tablecell {
+  display: table-cell;
+}
+
+.Tablemiddleline {
+  vertical-align: middle;
+}
+
+.Tablebottomline {
+  vertical-align: bottom;
+}
+
+.Tabletopline {
+  vertical-align: top;
+}
+
+.CustomButtonBar {
+}
+
+.CustomButtonBar.CustomButtonBarHidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ImgResponsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.PageButton {
+  display: inline-block;
+  padding: 10px 33px 10px 15px;
+  font-family: var(--primary-font-bold);
+  border: none;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.PageButton:last-child {
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+.PageButton.PrimaryColorButton {
+  background-color: var(--site-darker-white);
+  color: var(--site-primary);
+  background-image: url("../assets/images/icons/right-direction-primary-color-arrow.svg");
+}
+
+.PageButton.PrimaryColorButton.PageBackButton {
+  background-image: url("../assets/images/icons/icon-back-primary.svg");
+  background-position: left 10px center;
+  padding: 10px 15px 10px 33px;
+}
+
+.PageButton.BlockButton {
+  min-width: inherit;
+  width: 100%;
+}
+
+/*ModuleIconicTextContent*/
+.ModuleIconicTextContent * {
+  box-sizing: border-box;
+}
+
+.ModuleIconicTextContent .ElementRow {
+  margin-top: 40px;
+}
+
+.ModuleIconicTextContent .ElementRow:first-child {
+  margin-top: 0px;
+}
+
+.ModuleIconicTextContent .IconBlock {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  padding-right: 5px;
+  position: relative;
+  top: 6px;
+}
+
+.ModuleIconicTextContent .IconicExcerptBlock {
+  display: inline-block;
+  vertical-align: top;
+  width: 80%;
+}
+/*ModuleIconicTextContent*/
+
+/*SiteFormModule*/
+.SiteFormModule {
+  position: relative;
+}
+
+.SiteFormModule * {
+  box-sizing: border-box;
+}
+
+.SiteFormModule .SiteFormRow {
+  margin-top: 25px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.SiteFormModule .SiteFormRow:first-child {
+  margin-top: 0px !important;
+}
+
+.SiteFormModule .SiteFormBlock {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.SiteFormModule label {
+  font-family: var(--primary-font-bold);
+  font-weight: normal;
+  color: var(--site-primary);
+  font-size: 17px;
+  line-height: normal;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.SiteFormModule .SiteFormInput {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-family: var(--primary-font-medium);
+  padding: 0 20px;
+  font-weight: normal;
+  color: var(--site-primary);
+  font-size: 17px;
+}
+
+.SiteFormModule textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-family: var(--primary-font-medium);
+  padding: 20px;
+  font-weight: normal;
+  color: var(--site-primary);
+  font-size: 17px;
+}
+
+.SiteFormModule .HasInputLegend {
+  position: relative;
+}
+
+.SiteFormModule .HasInputLegend .SiteFormInput {
+  padding-right: 60px;
+}
+
+.SiteFormModule .HasInputLegend .InputLegend {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-family: var(--primary-font-medium);
+  line-height: 38px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: var(--site-darker-white);
+  z-index: 1;
+  font-size: 17px;
+}
+
+.SiteFormModule .HasInputLegend .InputLegend span {
+  display: inline-block;
+  color: var(--site-primary);
+}
+
+.SiteFormModule .SelectField {
+  position: relative;
+  background-color: var(--site-white-color);
+}
+
+.SiteFormModule .SelectField select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-family: var(--primary-font-medium);
+  padding: 0 50px 0 20px;
+  font-weight: normal;
+  color: var(--site-primary);
+  border-radius: 0px;
+  font-size: 17px;
+  background-color: transparent;
+}
+
+.SiteFormModule .SelectField select.NoSelectYet {
+  color: var(--site-primary-light);
+}
+
+.SiteFormModule .SelectField:after {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-color: var(--site-darker-white);
+  background-image: url("../assets/images/icons/down-direction-primary-color-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26px;
+  content: " ";
+  display: block;
+}
+
+.SiteFormModule .SiteFormButton {
+  text-align: left;
+}
+
+.SiteFormModule .SiteSubmitRow {
+}
+
+.SiteFormModule .SiteFormField {
+  height: 40px;
+}
+
+.SiteFormModule .SiteFormField.textarea {
+  height: 80px;
+}
+
+.SiteFormModule input::-webkit-input-placeholder,
+.SiteFormModule textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: var(--site-primary-light);
+}
+
+.SiteFormModule input::-moz-placeholder,
+.SiteFormModule textarea::-moz-placeholder {
+  opacity: 1;
+  color: var(--site-primary-light);
+}
+
+.SiteFormModule input:-ms-input-placeholder,
+.SiteFormModule textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: var(--site-primary-light);
+}
+
+.SiteFormModule input::placeholder,
+.SiteFormModule textarea::placeholder {
+  opacity: 1;
+  color: var(--site-primary-light);
+}
+
+/*SiteFormModule*/
+
+/*ListingResultModule*/
+.ListingResultModule {
+  margin-top: 25px;
+}
+.ListingResultModule:first-child {
+  margin-top: 0px;
+}
+.ListingResultModule span {
+  color: var(--site-primary) !important;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ListingResultModule h4,
+.ListingResultModule h5,
+.ListingResultModule h6 {
+  color: var(--site-white-color);
+}
+
+.ListingResultRow {
+  margin-top: 20px;
+}
+
+.ListingResultRow:first-child {
+  margin-top: 0px;
+}
+
+/*ListingResultModule*/
+
+/*GotResultModule*/
+.GotResultModule {
+}
+
+.GotResultTick {
+  display: inline-block;
+  width: 115px;
+  height: 84px;
+  background-image: url("../assets/images/icons/tick-icon-light-primary.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  margin-bottom: 25px;
+}
+
+.GotResultInfo {
+  margin-bottom: 40px;
+}
+
+.GotResultInfo span {
+  display: block;
+  font-size: 20px;
+  font-family: var(--primary-font-bold);
+  color: var(--site-white-color);
+  margin-bottom: 30px;
+}
+
+.GotResultInfo i {
+  display: block;
+  font-size: 50px;
+  font-family: var(--primary-font-bold);
+  color: var(--site-primary-light);
+  font-style: normal;
+}
+/*GotResultModule*/
+
+/*NewsListModule*/
+.NewsExcerptHead {
+  margin-bottom: 5px !important;
+}
+
+.NewsListRow {
+  padding: 10px 40px 10px 15px;
+  border-top: 1px solid var(--site-white-color);
+  position: relative;
+  background: url("../assets/images/icons/right-direction-primary-color-arrow.svg")
+    no-repeat right 20px center;
+  background-size: 15px;
+}
+.NewsListRow:before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  content: " ";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.19);
+}
+
+.NewsListRow:first-child {
+  margin-top: 0px;
+}
+/*NewsListModule*/
+
+/*weather widget*/
+.WeatherWidget {
+}
+
+.WeatherWidgetPrimaryPart {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 15px;
+}
+
+.WeatherWidgetMainIcon i {
+  color: #fff;
+  font-size: 100px;
+}
+
+.WeatherWidgetTemp {
+  font-size: 50px;
+  color: var(--site-white-color);
+  font-family: var(--primary-font-light);
+  margin-top: 12px;
+}
+
+.WeatherWidgetSecondaryPart {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  top: -4px;
+  max-width: 50%;
+}
+
+.WeatherWidgetBottomPart {
+  padding: 15px 0;
+  border-top: rgba(255, 255, 255, 0.5) solid 1px;
+  border-bottom: rgba(255, 255, 255, 0.5) solid 1px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.WeatherLink {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+}
+
+.WeatherLink a {
+  display: block;
+  background-image: url("../assets/images/icons/icon_next_white.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.WeatherCondition {
+  line-height: normal;
+}
+
+.WeatherCondition i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  margin-right: 6px;
+}
+.WeatherCondition i.BestCondition {
+  background-color: var(--site-success);
+}
+.WeatherCondition span.BestCondition {
+  color: var(--site-success);
+}
+
+.WeatherWidgetTaupunkt {
+  font-size: 17px;
+  font-family: "HelveticaNeue-light";
+  color: #fff;
+  margin-top: 10px;
+}
+
+.WeatherCondition span {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 17px;
+  font-family: var(--primary-font-light);
+  color: #fff;
+  max-width: 70%;
+}
+
+.WeatherPresentZone {
+  line-height: normal;
+  margin-top: 8px;
+}
+
+.WeatherPresentZone i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 15px;
+  background-image: url("../assets/images/weather-widget/weather-location-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  margin-right: 6px;
+}
+
+.WeatherPresentZone span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 17px;
+  font-family: var(--primary-font-light);
+  color: var(--site-white-color);
+}
+
+.WeatherName {
+  margin-top: 6px;
+  font-size: 21px;
+  font-family: var(--primary-font-light);
+  color: var(--site-white-color);
+}
+
+.WeatherForecastModule .WeatherWidget {
+  margin-bottom: 60px;
+}
+
+.WeatherForecastModule .WeatherWidgetPrimaryPart {
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.WeatherForecastModule .WeatherWidgetSecondaryPart {
+  display: block;
+  margin-right: 0px;
+  text-align: center;
+  top: inherit;
+  max-width: inherit;
+  margin-bottom: 10px;
+}
+
+.WeatherForecastModule .WeatherWidgetSecondaryPart:last-child {
+  margin-bottom: 0;
+}
+
+.WeatherForecastModule .WeatherWidgetTemp {
+  color: var(--site-primary);
+}
+
+.WeatherForecastModule .WeatherWidgetMainIcon {
+  display: inline-block;
+}
+
+.WeatherForecastModule .WeatherWidgetMainIcon i {
+  color: var(--site-primary);
+  font-size: 95px;
+  margin-bottom: 20px;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table {
+  width: 100%;
+  border: none;
+  font-size: 21px;
+  font-family: var(--primary-font-light);
+  color: var(--site-white-color);
+  border-collapse: collapse;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo .SiteFormInput {
+  margin: 0px;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.19);
+  border: 1px solid var(--site-white-color);
+  border-radius: 3px;
+  font-size: 21px;
+  font-family: var(--primary-font-light);
+  color: var(--site-white-color);
+  height: 35px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo .SiteFormInput ~ span {
+  margin-right: 5px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  font-size: 21px;
+  font-family: var(--primary-font-light);
+  color: var(--site-white-color);
+  background-color: rgba(255, 255, 255, 0.19);
+  border: 1px solid var(--site-white-color);
+  border-radius: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  font-size: 0px;
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  .SiteFormInput
+  ~ span:last-child {
+  margin-right: 0px;
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  .SiteFormInput
+  ~ span:nth-child(2) {
+  background-image: url("../assets/images/icons/ok.svg");
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  .SiteFormInput
+  ~ span:nth-child(3) {
+  background-image: url("../assets/images/icons/cancel.svg");
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  table
+  tbody
+  tr:first-child
+  td {
+  padding-top: 20px;
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  table
+  tbody
+  tr:last-child
+  td {
+  padding-bottom: 20px;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table tbody td {
+  padding: 0 5px 5px 5px;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table tbody td:first-child {
+  text-align: left;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table tbody td:last-child {
+  text-align: right;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table thead th:first-child {
+  text-align: left;
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table thead th {
+  font-weight: normal;
+  padding: 10px 5px;
+  border-bottom: 1px solid var(--site-white-color);
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table thead th span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  table
+  thead
+  th
+  span:last-child {
+  margin-right: 0px;
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  table
+  thead
+  th
+  span.CurrentLocation
+  i {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  table
+  thead
+  th
+  span.CurrentLocation:before {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 15px;
+  background-size: cover;
+  background-position: left top;
+  background-image: url("../assets/images/weather-widget/weather-location-icon.svg");
+  margin-right: 5px;
+  content: " ";
+}
+
+.WeatherDetailInfoModule
+  .WeatherPrimaryDetailInfo
+  table
+  thead
+  th
+  span.ChangeLocation {
+  width: 21px;
+  height: 21px;
+  background-size: cover;
+  background-position: left top;
+  background-image: url("../assets/images/weather-widget/change-weather-location.svg");
+}
+
+.WeatherDetailInfoModule .WeatherPrimaryDetailInfo table thead th:last-child {
+  text-align: right;
+}
+
+.WeatherUpcomingInfoModule {
+  position: relative;
+}
+
+.WeatherUpcomingInfoModule:before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  content: " ";
+  display: block;
+  background-color: rgba(255, 255, 255, 0.19);
+}
+
+.WeatherUpcomingInfoModule table {
+  width: 100%;
+  border: none;
+  font-size: 21px;
+  font-family: var(--primary-font-light);
+  color: var(--site-white-color);
+  border-collapse: collapse;
+}
+
+.WeatherUpcomingInfoModule table tbody td:first-child {
+  text-align: left;
+}
+
+.WeatherUpcomingInfoModule table tbody td:last-child {
+  text-align: right;
+}
+
+.WeatherUpcomingInfoModule table tbody td {
+  padding: 10px 15px;
+  border-top: 1px solid var(--site-white-color);
+}
+
+.WeatherUpcomingInfoModule span {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: var(--primary-font-bold);
+  margin-right: 5px;
+  min-width: 30px;
+}
+
+.WeatherUpcomingInfoModule small {
+  font-size: 16px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+}
+
+.WeatherUpcomingInfoModule i {
+  vertical-align: middle;
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.WeatherUpcomingInfoModule i img {
+  width: 100%;
+  height: auto;
+}
+
+/*weather widget*/
+
+/*CapturedPortionActivityModule*/
+.CapturedPortionActivityModule {
+}
+
+.CapturedPortionActivityModule .BottomActionButtonHolder {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.CapturedPortionActivityModule .CapturedImage {
+  padding: 0 30px;
+  text-align: center;
+}
+
+.CapturedPortionActivityModule .CapturedImage img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.CapturedPortionActivityModule .CapturedImageTitle {
+  margin-top: 20px;
+}
+
+.CapturedPortionActivityModule .CapturedImageTitle input[type="text"] {
+  padding: 8px 0;
+  border: none;
+  border-bottom: 1px solid var(--site-white-color);
+  font-size: 22px;
+  color: var(--site-white-color);
+  font-family: var(--primary-font-bold);
+  background-color: transparent;
+  width: 100%;
+}
+
+.CapturedPortionActivityModule
+  .CapturedImageTitle
+  input[type="text"]::placeholder {
+  color: var(--site-white-color);
+  opacity: 1;
+}
+
+.CapturedAreaAtbg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/*CapturedPortionActivityModule*/
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .BottomActionButtonHolder.BottomActionButtonHolderV1 {
+    width: auto;
+    left: inherit;
+    bottom: 0px;
+    right: 0px;
+    padding: 0 35px;
+  }
+
+  .BottomActionButtonHolder.BottomActionButtonHolderV1 span {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 0 10px 0;
+  }
+
+  .BottomActionButtonHolder.BottomActionButtonHolderV1
+    span.ActionButtonMeasure {
+    background-size: 30px;
+  }
+
+  .BottomActionButtonHolder.BottomActionButtonHolderV1
+    span.ActionButtonCrackPortion {
+    background-size: 40px;
+  }
+
+  .WeatherForecastModule .WeatherWidget {
+    margin-bottom: 10px;
+  }
+
+  .HasOrientationNav {
+    padding-top: 80px;
+  }
+
+  .BottomActionButtonHolder.OrientationTopNav {
+    position: absolute;
+    bottom: inherit;
+    top: 20px;
+    right: 10px;
+    left: inherit;
+    width: 200px;
+    z-index: 1;
+  }
+
+  .BottomActionButtonHolder.OrientationTopNav span {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 10px !important;
+    background-size: 50% auto !important;
+  }
+}
+
+/*custom style*/

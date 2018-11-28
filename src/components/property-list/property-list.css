@@ -1,0 +1,36 @@
+.Container {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 3em;
+}
+
+.Content {
+  flex: 1 0 auto;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    0% 100%,
+    0 calc(100% - 25px + 4px),
+    calc((100vh / 4 - 30px) / 2 + 4px) calc(100% - 25px + 4px),
+    calc((100vh / 4 - 30px) / 2 + 4px)
+      calc(100% - (100vh / 4 - 30px) + 25px - 4px),
+    0 calc(100% - (100vh / 4 - 30px) + 25px - 4px)
+  );
+}
+
+.Active {
+  background-color: #cccccc;
+  border-radius: 16px;
+}
+
+.Property {
+  margin: 2px 20px;
+  padding: 4px;
+  font-size: 0.9em;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

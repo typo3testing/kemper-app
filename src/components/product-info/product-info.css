@@ -1,0 +1,15 @@
+.Container {
+}
+
+.Content {
+  display: flex;
+  flex-flow: column;
+}
+
+.Description {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 1.3em;
+  line-height: 1.2em;
+}

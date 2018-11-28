@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.222 39.286">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #c5d7e2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_1887" data-name="Group 1887" transform="translate(-31 -736.574)">
+    <g id="Group_1883" data-name="Group 1883" transform="translate(32 737.574)">
+      <rect id="Rectangle_303" data-name="Rectangle 303" class="cls-1" width="28.222" height="37.286"/>
+      <rect id="Rectangle_304" data-name="Rectangle 304" class="cls-1" width="19.522" height="6.487" transform="translate(4.35 4.242)"/>
+      <rect id="Rectangle_305" data-name="Rectangle 305" class="cls-1" width="3.14" height="3.14" transform="translate(5.596 29.098)"/>
+      <rect id="Rectangle_306" data-name="Rectangle 306" class="cls-1" width="3.14" height="3.14" transform="translate(12.424 29.098)"/>
+      <rect id="Rectangle_307" data-name="Rectangle 307" class="cls-1" width="3.14" height="3.14" transform="translate(19.248 29.098)"/>
+      <rect id="Rectangle_308" data-name="Rectangle 308" class="cls-1" width="3.14" height="3.14" transform="translate(5.596 22.671)"/>
+      <rect id="Rectangle_309" data-name="Rectangle 309" class="cls-1" width="3.14" height="3.14" transform="translate(12.424 22.671)"/>
+      <rect id="Rectangle_310" data-name="Rectangle 310" class="cls-1" width="3.14" height="3.14" transform="translate(19.248 22.671)"/>
+      <rect id="Rectangle_311" data-name="Rectangle 311" class="cls-1" width="3.14" height="3.14" transform="translate(5.596 15.813)"/>
+      <rect id="Rectangle_312" data-name="Rectangle 312" class="cls-1" width="3.14" height="3.14" transform="translate(12.424 15.813)"/>
+      <rect id="Rectangle_313" data-name="Rectangle 313" class="cls-1" width="3.14" height="3.14" transform="translate(19.248 15.813)"/>
+    </g>
+  </g>
+</svg>

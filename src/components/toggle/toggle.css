@@ -1,0 +1,57 @@
+.Container {
+  position: relative;
+}
+
+.Container.hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.SizeDummy {
+}
+
+.Child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  border: 4px solid white;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.Child.inactive {
+  border: 0;
+  transform: translateX(-50%) scale(0.7);
+  z-index: 10;
+  background-color: grey;
+}
+
+.ActiveBackground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 19;
+  border-radius: 50%;
+  background: white;
+  width: 78px;
+  height: 78px;
+  margin: 0 40px 40px 40px;
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .ActiveBackground {
+    width: 60px;
+    height: 60px;
+    margin: 24px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .ActiveBackground {
+    width: calc(100vh / 4 - 30px);
+    height: calc(100vh / 4 - 30px);
+    margin: 0 25px 24px 25px;
+  }
+}

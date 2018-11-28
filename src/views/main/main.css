@@ -1,0 +1,16 @@
+.Container {
+}
+
+.ResetTrackingButton {
+  position: absolute;
+  left: 0;
+  top: 64px;
+  z-index: 200;
+  margin-top: 25px;
+}
+
+@media only screen and (max-height: 736px) {
+  .ResetTrackingButton {
+    top: calc(7vh + 16px);
+  }
+}

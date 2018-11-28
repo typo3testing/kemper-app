@@ -1,0 +1,198 @@
+.Container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Empty {
+  font-size: 1.6em;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.Projects {
+  top: calc(48px + 32px);
+  position: absolute;
+  width: calc(100% - 200px);
+  bottom: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.noCloudToggle .Projects {
+  width: 100%;
+}
+
+.Projects::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+
+.ProjectContainer {
+  flex: 0 0 calc(50vw - 100px - 2rem);
+  margin-right: 2rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.noCloudToggle .ProjectContainer {
+  flex-basis: calc(50vw - 2rem);
+}
+
+.Project {
+  display: flex;
+  flex-flow: column;
+  bottom: 0;
+  position: absolute;
+  top: 10px;
+}
+
+.ProjectHeader {
+  font-size: 2em;
+  border: 1px solid white;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.ProjectBody {
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.ProjectImage {
+  flex: 1 0 auto;
+  background: center / cover no-repeat;
+  border-radius: 15px;
+  min-width: calc(50vw - 100px - 2rem - 60px);
+  cursor: pointer;
+}
+
+.noCloudToggle .ProjectImage {
+  min-width: calc(50vw - 2rem - 60px);
+}
+
+.ProjectButtons {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.ProjectButton {
+  margin-left: 0;
+}
+
+.ProjectButton:last-child {
+  margin-right: 0;
+}
+
+.CloudToggle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.UserName {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin: 16px;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .Projects {
+    width: calc(100vw - 114px - 25px);
+  }
+
+  .noCloudToggle .Projects {
+    width: 100vw;
+  }
+
+  .ProjectContainer {
+    flex-basis: calc((100vw - 114px - 25px) / 2 - 2rem);
+  }
+
+  .noCloudToggle .ProjectContainer {
+    flex-basis: calc(50vw - 2rem);
+  }
+
+  .ProjectImage {
+    min-width: calc((100vw - 114px - 25px) / 2 - 2rem - 60px);
+  }
+
+  .noCloudToggle .ProjectImage {
+    min-width: calc(50vw - 2rem - 60px);
+  }
+
+  .Projects,
+  .Dots {
+    top: calc(100vh / 4 - 30px);
+  }
+
+  .UserName {
+    height: 7vh;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .ProjectContainer {
+    padding: 20px;
+    box-sizing: border-box;
+    flex-basis: calc(100vw - 200px - 2rem);
+  }
+
+  .noCloudToggle .ProjectContainer {
+    flex-basis: calc(100vw - 2rem);
+  }
+
+  .ProjectImage {
+    min-width: calc(100vw - 200px - 2rem - 60px);
+  }
+
+  .noCloudToggle .ProjectImage {
+    min-width: calc(50vw - 2rem - 60px);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .CloudToggle {
+    bottom: auto;
+    top: 0;
+  }
+
+  .Projects {
+    width: 100%;
+  }
+
+  .ProjectImage {
+    min-width: calc(100vw - 60px);
+  }
+
+  .ProjectContainer {
+    flex-basis: 100vw;
+  }
+
+  .UserName {
+    height: 32px;
+    margin: 10px;
+    left: calc(32px + 20px);
+    right: calc(108px);
+  }
+}

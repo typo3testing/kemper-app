@@ -1,0 +1,482 @@
+.Container {
+  cursor: pointer;
+  width: 78px;
+  height: 78px;
+  margin: 0 40px 40px 40px;
+  transition: opacity 0.5s linear;
+  pointer-events: all;
+}
+
+.Container.dark {
+}
+
+.Wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.Background,
+.Button {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.Background {
+  border-radius: 100%;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.Button {
+  z-index: 20;
+}
+
+.Container.size-small {
+  width: 48px;
+  height: 48px;
+  margin: 16px 0 16px 16px;
+}
+
+.Container.size-medium {
+  width: 10vh;
+  height: 10vh;
+  margin: 10px;
+}
+
+.hidden.Container .Wrapper {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.Button.dashed {
+  border-style: dashed;
+  border-width: 3px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.Button.icon-back {
+  background-image: url("../../../assets/images/icons/icon-back-primary.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 13px;
+}
+
+.Button.icon-next {
+  -webkit-mask-position-x: calc(100% / 7 * 6);
+  -webkit-mask-position-y: calc(100% / 7 * 6);
+  background-position-x: calc(100% / 7 * 6);
+  background-position-y: calc(100% / 7 * 6);
+}
+
+.Button.icon-roomplanner {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 1);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-projects {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-vr {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 4);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-walk {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-livemeasure {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-sketchplan {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 4);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-help {
+  -webkit-mask-position-x: calc(100% / 7 * 0);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 0);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.Button.icon-menu {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 1);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-screenshot {
+  -webkit-mask-position-x: calc(100% / 7 * 6);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 6);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-share {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 4);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.Button.icon-gallery {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.Button.icon-send {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 6);
+  background-position-x: calc(100% / 7 * 1);
+  background-position-y: calc(100% / 7 * 6);
+}
+
+.Button.icon-save {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-cart {
+  -webkit-mask-position-x: calc(100% / 7 * 7);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 7);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-delete {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 3);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-configure {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 4);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-info {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 3);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-addProduct {
+  -webkit-mask-position-x: calc(100% / 7 * 0);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 0);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-open {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-skip {
+  -webkit-mask-position-x: calc(100% / 7 * 6);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 6);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-finish {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 1);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-undo {
+  -webkit-mask-position-x: calc(100% / 7 * 0);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 0);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-window {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 4);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 4);
+}
+
+.Button.icon-door {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 4);
+  background-position-x: calc(100% / 7 * 1);
+  background-position-y: calc(100% / 7 * 4);
+}
+
+.Button.icon-capture {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 3);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-abort {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-home {
+  -webkit-mask-position-x: calc(100% / 7 * 7);
+  -webkit-mask-position-y: calc(100% / 7 * 4);
+  background-position-x: calc(100% / 7 * 7);
+  background-position-y: calc(100% / 7 * 4);
+}
+
+.Button.icon-confirmGround {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 1);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-scaleGroundDown {
+  -webkit-mask-position-x: calc(100% / 7 * 0);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 0);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.Button.icon-scaleGroundUp {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 6);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 6);
+}
+
+.Button.icon-sketch {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 4);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-move {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-room {
+  -webkit-mask-position-x: calc(100% / 7 * 1);
+  -webkit-mask-position-y: calc(100% / 7 * 1);
+  background-position-x: calc(100% / 7 * 1);
+  background-position-y: calc(100% / 7 * 1);
+}
+
+.Button.icon-resetTracking {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 2);
+  background-position-x: calc(100% / 7 * 3);
+  background-position-y: calc(100% / 7 * 2);
+}
+
+.Button.icon-search {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.Button.icon-play {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 4);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 4);
+}
+
+.Button.icon-play_outlined {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 5);
+  background-position-x: calc(100% / 7 * 4);
+  background-position-y: calc(100% / 7 * 5);
+}
+
+.Button.icon-pause_outlined {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 5);
+  background-position-x: calc(100% / 7 * 3);
+  background-position-y: calc(100% / 7 * 5);
+}
+
+.Button.icon-stop_outlined {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 5);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 5);
+}
+
+.Button.icon-pause {
+  -webkit-mask-position-x: calc(100% / 7 * 6);
+  -webkit-mask-position-y: calc(100% / 7 * 4);
+  background-position-x: calc(100% / 7 * 6);
+  background-position-y: calc(100% / 7 * 4);
+}
+
+.Button.icon-login {
+  -webkit-mask-position-x: calc(100% / 7 * 0);
+  -webkit-mask-position-y: calc(100% / 7 * 5);
+  background-position-x: calc(100% / 7 * 0);
+  background-position-y: calc(100% / 7 * 5);
+}
+
+.Button.icon-add_outline {
+  -webkit-mask-position-x: calc(100% / 7 * 7);
+  -webkit-mask-position-y: calc(100% / 7 * 5);
+  background-position-x: calc(100% / 7 * 7);
+  background-position-y: calc(100% / 7 * 5);
+}
+
+.Button.icon-remove_outline {
+  -webkit-mask-position-x: calc(100% / 7 * 0);
+  -webkit-mask-position-y: calc(100% / 7 * 6);
+  background-position-x: calc(100% / 7 * 0);
+  background-position-y: calc(100% / 7 * 6);
+}
+
+.Button.icon-share_outline {
+  -webkit-mask-position-x: calc(100% / 7 * 6);
+  -webkit-mask-position-y: calc(100% / 7 * 5);
+  background-position-x: calc(100% / 7 * 6);
+  background-position-y: calc(100% / 7 * 5);
+}
+
+.Button.icon-shopfinder {
+  -webkit-mask-position-x: calc(100% / 7 * 4);
+  -webkit-mask-position-y: calc(100% / 7 * 6);
+  background-position-x: calc(100% / 7 * 4);
+  background-position-y: calc(100% / 7 * 6);
+}
+
+.Button.icon-cloud {
+  -webkit-mask-position-x: calc(100% / 7 * 7);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 7);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.Button.icon-local {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.Button.icon-upload {
+  -webkit-mask-position-x: calc(100% / 7 * 6);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 6);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.Button.icon-download {
+  -webkit-mask-position-x: calc(100% / 7 * 5);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  background-position-x: calc(100% / 7 * 5);
+  background-position-y: calc(100% / 7 * 3);
+}
+
+.active.Container .Button {
+  -webkit-mask-position-x: calc(100% / 7 * 2);
+  -webkit-mask-position-y: calc(100% / 7 * 0);
+  background-position-x: calc(100% / 7 * 2);
+  background-position-y: calc(100% / 7 * 0);
+}
+
+.inactive.Container {
+  opacity: 0.5;
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .Container.size-small {
+    width: 40px;
+    height: 40px;
+    margin: 20px 0 15px 20px;
+  }
+
+  .Container.size-medium {
+    width: 42px;
+    height: 42px;
+    margin: 5px;
+  }
+
+  .Container {
+    width: 60px;
+    height: 60px;
+    margin: 24px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .Container {
+    width: calc(100vh / 4 - 30px);
+    height: calc(100vh / 4 - 30px);
+    margin: 0 25px 24px 25px;
+  }
+
+  .Container.size-small {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*edge compatibility*/
+
+.InlineSvg {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+.InlineSvgBackground {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}

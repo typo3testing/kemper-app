@@ -1,0 +1,10 @@
+.Container {
+  flex: 0 0 auto;
+  padding: 0 18px;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 3px 0 0 0;
+}

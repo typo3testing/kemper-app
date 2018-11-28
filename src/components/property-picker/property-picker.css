@@ -1,0 +1,94 @@
+.Container {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  height: calc(78px - 2px);
+}
+
+.Button {
+  flex: 0 0 auto;
+  height: 78px;
+  width: 78px;
+}
+
+.Button.Previous {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+}
+
+.Button.Next {
+  -webkit-mask-position-x: calc(100% / 7 * 3);
+  -webkit-mask-position-y: calc(100% / 7 * 3);
+  transform: rotate(-180deg);
+}
+
+.EdgeButtonNext {
+  margin-left: -50px !important;
+}
+
+.EdgeButtonPrevious {
+  margin-right: -50px !important;
+}
+
+.Active {
+  height: calc(78px - 2px);
+  margin: 0 -2px;
+  flex: 1 1 auto;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.Active.noButtons {
+  border-radius: calc(78px / 2);
+}
+
+.Property {
+  font-size: 0.9em;
+  flex: 0 0 auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Value {
+  font-size: 1.1em;
+  flex: 0 0 auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .Container {
+    height: calc(100vh / 4 - 30px);
+  }
+
+  .Button {
+    height: calc(100vh / 4 - 30px);
+    width: calc(100vh / 4 - 30px);
+  }
+
+  .Active {
+    height: calc(100vh / 4 - 30px - 2px);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .Container {
+    height: 60px;
+  }
+
+  .Button {
+    height: 60px;
+    width: 60px;
+  }
+
+  .Active {
+    height: 60px;
+  }
+}

@@ -1,0 +1,46 @@
+.Container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 20;
+}
+
+.Button {
+  transition: 0.5s cubic-bezier(0.38, 1.38, 0.73, 0.98);
+  transition-property: transform, opacity;
+}
+
+.hidden {
+  display: none;
+  pointer-events: none;
+}
+
+.hidden.ButtonShowHelp {
+  transform: translateX(calc(-48px - 16px));
+}
+
+.Button.PositionLeft {
+  transform: translateX(calc(-96px - 32px));
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .hidden.ButtonShowHelp {
+    transform: translateX(calc(-7vh - 16px));
+  }
+
+  .Button.PositionLeft {
+    transform: translateX(calc(-14vh - 32px));
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .hidden.ButtonShowHelp {
+    transform: translateX(calc(-32px - 10px));
+  }
+
+  .Button.PositionLeft {
+    transform: translateX(-84px);
+  }
+}

@@ -1,0 +1,77 @@
+.Container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.HeaderBar {
+  position: fixed;
+}
+
+.Map {
+  width: 100vw;
+  height: 100vh; /* vh,vw needed for google maps */
+}
+
+.SelectedMarker {
+  opacity: 0;
+  transition: 0.5s cubic-bezier(0.38, 1.38, 0.73, 0.98);
+  transition-property: transform, opacity;
+  pointer-events: none;
+  position: absolute;
+  width: 50%;
+  left: calc(78px / 2 + 40px);
+  bottom: 0;
+  z-index: 10;
+  font-size: 1.1em;
+}
+
+.isVisible.SelectedMarker {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.CloseMarker {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.Detail {
+  display: flex;
+  margin: 4px 0;
+}
+
+.Key {
+  flex: 0 0 50%;
+}
+
+.Value {
+  flex: 0 0 50%;
+}
+
+.Email {
+  margin: 8px 0;
+}
+
+.Content {
+  padding-left: 40px;
+}
+
+@media only screen and (orientation: landscape) and (max-height: 736px) {
+  .SelectedMarker {
+    left: calc((100vh / 4 - 30px) / 2 + 25px);
+  }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .SelectedMarker {
+    left: calc(24px + 30px);
+    right: calc(24px + 30px);
+    width: auto;
+  }
+}

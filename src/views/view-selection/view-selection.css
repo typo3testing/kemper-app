@@ -1,0 +1,20 @@
+.Container {
+}
+
+.Container .ExportRoomButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 16px;
+}
+
+@media only screen and (orientation: portrait) and (max-height: 736px),
+  screen and (orientation: portrait) and (max-width: 414px) {
+  .ButtonSeparator {
+    flex: 0 0 5%;
+  }
+
+  .Container .ExportRoomButton {
+    margin: 10px;
+  }
+}

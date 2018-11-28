@@ -1,0 +1,11 @@
+.Container {
+  flex: 0 0 auto;
+  border-radius: 15px 15px 0 0;
+  padding: 18px;
+  font-size: 2em;
+  height: 2rem;
+  line-height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
