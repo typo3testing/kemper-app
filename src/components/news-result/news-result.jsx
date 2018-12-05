@@ -25,7 +25,7 @@ export default class NewsResult extends React.Component {
   }
   componentDidMount() {
     if (sessionStorage.getItem("initialNewsList") == null) {
-      fetch("http://kemperol.vonuebermorgen.de/?api=kemper&action=news")
+      fetch("http://kemperol.kemper-system.de/?api=kemper&action=news")
         .then(response => {
           return response.json();
         })
@@ -54,10 +54,8 @@ export default class NewsResult extends React.Component {
         key={v.uid}
         onClick={() => this.loadDetails(v)}
       >
-        <h5 className={cx(globalStyles.NewsExcerptHead)}>{v.title}</h5>
-        <p>
-          <em>{v.dtstart}</em>
-        </p>
+        <h6 className={cx(globalStyles.NewsExcerptHead)}>{v.title}</h6>
+        <p>{v.dtstart}</p>
       </div>
     ));
     if (this.state.dataDetails) {
@@ -75,7 +73,7 @@ export default class NewsResult extends React.Component {
           </div>
           <br />
           <br />
-          <h4>{this.state.contentDetails.title}</h4>
+          <h5>{this.state.contentDetails.title}</h5>
           <p>
             <em>{this.state.contentDetails.dtstart}</em>
           </p>

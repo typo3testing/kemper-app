@@ -231,6 +231,7 @@ a:visited {
   --site-primary-light: #f2f5f7;
   --site-dark: #6a818e;
   --site-success: #2fdc64;
+  --site-line: #C5D7E2;
   --primary-font-bold: "HelveticaNeue-bold";
   --primary-font-light: "HelveticaNeue-light";
   --primary-font-medium: "HelveticaNeue-medium";
@@ -645,11 +646,11 @@ li {
 }
 
 .BottomActionButtonHolder.BottomActionButtonHolderV3 span {
-  margin-left: 13px;
-  margin-right: 13px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 10px;
-  width: 92px;
-  height: 92px;
+  width: 78px;
+  height: 78px;
 }
 
 .BottomActionButtonHolder.BottomActionButtonHolderV2 span:first-child {
@@ -692,7 +693,7 @@ span.ActionButtonCapture.disabled {
 
 span.ActionButtonCalculate {
   background-image: url("../assets/images/icons/calculator-icon-primary.svg");
-  background-size: 40px;
+  background-size: 31px;
 }
 span.ActionButtonCalculate.disabled,
 span.ActionButtonCalculate.inactive {
@@ -701,7 +702,7 @@ span.ActionButtonCalculate.inactive {
 
 span.ActionButtonLocation {
   background-image: url("../assets/images/icons/location-icon-primary.svg");
-  background-size: 59px;
+  background-size: 30px;
 }
 span.ActionButtonLocation.disabled,
 span.ActionButtonLocation.inactive {
@@ -709,12 +710,12 @@ span.ActionButtonLocation.inactive {
 }
 
 span.ActionButtonTrash {
-  background-image: url("../assets/images/icons/trash-icon-primary.svg");
-  background-size: 44px;
+  background-image: url("../assets/images/icons/reset-icon.svg");
+  background-size: 50px;
 }
 span.ActionButtonTrash.disabled,
 span.ActionButtonTrash.inactive {
-  background-image: url("../assets/images/icons/trash-icon-secondary.svg");
+  background-image: url("../assets/images/icons/reset-icon-disabled.svg");
 }
 
 span.ActionButtonCamera {
@@ -725,19 +726,19 @@ span.ActionButtonCamera {
 span.ActionButtonDownload.disabled,
 span.ActionButtonDownload.inactive {
   background-image: url("../assets/images/icons/download-icon-secondary.svg");
-  background-size: 46px;
+  background-size: 38px;
 }
 
 span.ActionButtonEmail.disabled,
 span.ActionButtonEmail.inactive {
   background-image: url("../assets/images/icons/email-button-secondary.svg");
-  background-size: 54px;
+  background-size: 40px;
 }
 
 span.ActionButtonDelete.disabled,
 span.ActionButtonDelete.inactive {
   background-image: url("../assets/images/icons/delete-icon-secondary.svg");
-  background-size: 44px;
+  background-size: 52px;
 }
 
 .BottomActionButtonHolder.BottomActionButtonHolderV2 .ActionButtonButtonType {
@@ -1023,7 +1024,7 @@ span.ActionButtonDelete.inactive {
 }
 
 .SiteFormModule .SelectField select.NoSelectYet {
-  color: var(--site-primary-light);
+  color: var(--site-primary);
 }
 
 .SiteFormModule .SelectField:after {
@@ -1085,6 +1086,9 @@ span.ActionButtonDelete.inactive {
 /*SiteFormModule*/
 
 /*ListingResultModule*/
+.ResultModule {
+  padding-top: 50px;
+}
 .ListingResultModule {
   margin-top: 25px;
 }
@@ -1100,7 +1104,7 @@ span.ActionButtonDelete.inactive {
 .ListingResultModule h4,
 .ListingResultModule h5,
 .ListingResultModule h6 {
-  color: var(--site-white-color);
+  color: var(--site-text-color);
 }
 
 .ListingResultRow {
@@ -1136,7 +1140,7 @@ span.ActionButtonDelete.inactive {
   display: block;
   font-size: 20px;
   font-family: var(--primary-font-bold);
-  color: var(--site-white-color);
+  color: var(--site-primary);
   margin-bottom: 30px;
 }
 
@@ -1144,7 +1148,7 @@ span.ActionButtonDelete.inactive {
   display: block;
   font-size: 50px;
   font-family: var(--primary-font-bold);
-  color: var(--site-primary-light);
+  color: var(--site-primary);
   font-style: normal;
 }
 /*GotResultModule*/
@@ -1155,11 +1159,11 @@ span.ActionButtonDelete.inactive {
 }
 
 .NewsListRow {
-  padding: 10px 40px 10px 15px;
-  border-top: 1px solid var(--site-white-color);
+  padding: 15px 40px 15px 0;
+  border-top: 1px solid var(--site-line);
   position: relative;
   background: url("../assets/images/icons/right-direction-primary-color-arrow.svg")
-    no-repeat right 20px center;
+    no-repeat right 0 center;
   background-size: 15px;
 }
 .NewsListRow:before {
@@ -1222,7 +1226,7 @@ span.ActionButtonDelete.inactive {
   position: absolute;
   right: 0;
   top: 0;
-  width: 100px;
+  width: 100%;
   height: 100%;
 }
 
@@ -1248,10 +1252,10 @@ span.ActionButtonDelete.inactive {
   margin-right: 6px;
 }
 .WeatherCondition i.BestCondition {
-  background-color: var(--site-success);
+  background-color: var(--site-primary);
 }
 .WeatherCondition span.BestCondition {
-  color: var(--site-success);
+  color: var(--site-primary);
 }
 
 .WeatherWidgetTaupunkt {
@@ -1303,7 +1307,7 @@ span.ActionButtonDelete.inactive {
 }
 
 .WeatherForecastModule .WeatherWidget {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .WeatherForecastModule .WeatherWidgetPrimaryPart {
@@ -1336,28 +1340,28 @@ span.ActionButtonDelete.inactive {
 
 .WeatherForecastModule .WeatherWidgetMainIcon i {
   color: var(--site-primary);
-  font-size: 95px;
-  margin-bottom: 20px;
+  font-size: 115px;
 }
 
 .WeatherDetailInfoModule .WeatherPrimaryDetailInfo table {
   width: 100%;
   border: none;
-  font-size: 21px;
+  font-size: 18px;
   font-family: var(--primary-font-light);
-  color: var(--site-white-color);
+  color: var(--site-text-color);
   border-collapse: collapse;
 }
 
 .WeatherDetailInfoModule .WeatherPrimaryDetailInfo .SiteFormInput {
+  width: calc(100% - 100px);
   margin: 0px;
   padding: 0 10px;
-  background-color: rgba(255, 255, 255, 0.19);
-  border: 1px solid var(--site-white-color);
-  border-radius: 3px;
+  background-color: var(--site-white-color);
+  border: 0;
+  border-radius: 0;
   font-size: 21px;
   font-family: var(--primary-font-light);
-  color: var(--site-white-color);
+  color: var(--site-primary);
   height: 35px;
   margin-right: 5px;
   display: inline-block;
@@ -1370,16 +1374,12 @@ span.ActionButtonDelete.inactive {
   width: 35px;
   line-height: 35px;
   font-size: 21px;
-  font-family: var(--primary-font-light);
-  color: var(--site-white-color);
-  background-color: rgba(255, 255, 255, 0.19);
-  border: 1px solid var(--site-white-color);
-  border-radius: 3px;
+  background-color: var(--site-darker-white);
   display: inline-block;
   vertical-align: middle;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 25px auto;
+  background-size: 18px auto;
   font-size: 0px;
 }
 
@@ -1394,14 +1394,16 @@ span.ActionButtonDelete.inactive {
   .WeatherPrimaryDetailInfo
   .SiteFormInput
   ~ span:nth-child(2) {
-  background-image: url("../assets/images/icons/ok.svg");
+  background-image: url("../assets/images/weather-widget/arrow-next.svg");
+  background-size: 12px auto;
 }
 
 .WeatherDetailInfoModule
   .WeatherPrimaryDetailInfo
   .SiteFormInput
   ~ span:nth-child(3) {
-  background-image: url("../assets/images/icons/cancel.svg");
+  background-color: var(--site-white-color);
+  background-image: url("../assets/images/weather-widget/cancel.svg");
 }
 
 .WeatherDetailInfoModule
@@ -1410,7 +1412,7 @@ span.ActionButtonDelete.inactive {
   tbody
   tr:first-child
   td {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .WeatherDetailInfoModule
@@ -1419,11 +1421,11 @@ span.ActionButtonDelete.inactive {
   tbody
   tr:last-child
   td {
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .WeatherDetailInfoModule .WeatherPrimaryDetailInfo table tbody td {
-  padding: 0 5px 5px 5px;
+  padding: 0 0 10px 0;
 }
 
 .WeatherDetailInfoModule .WeatherPrimaryDetailInfo table tbody td:first-child {
@@ -1440,7 +1442,7 @@ span.ActionButtonDelete.inactive {
 
 .WeatherDetailInfoModule .WeatherPrimaryDetailInfo table thead th {
   font-weight: normal;
-  padding: 10px 5px;
+  padding: 10px 0;
   border-bottom: 1px solid var(--site-white-color);
 }
 
@@ -1469,6 +1471,8 @@ span.ActionButtonDelete.inactive {
   display: inline-block;
   vertical-align: middle;
   font-style: normal;
+  font-size: 21px;
+  color: var(--site-primary);
 }
 
 .WeatherDetailInfoModule
@@ -1483,7 +1487,7 @@ span.ActionButtonDelete.inactive {
   height: 15px;
   background-size: cover;
   background-position: left top;
-  background-image: url("../assets/images/weather-widget/weather-location-icon.svg");
+  background-image: url("../assets/images/weather-widget/weather-location-icon-blue.svg");
   margin-right: 5px;
   content: " ";
 }
@@ -1527,44 +1531,95 @@ span.ActionButtonDelete.inactive {
   border: none;
   font-size: 21px;
   font-family: var(--primary-font-light);
-  color: var(--site-white-color);
+  color: var(--site-primary);
   border-collapse: collapse;
 }
 
-.WeatherUpcomingInfoModule table tbody td:first-child {
-  text-align: left;
-}
-
-.WeatherUpcomingInfoModule table tbody td:last-child {
-  text-align: right;
-}
-
 .WeatherUpcomingInfoModule table tbody td {
-  padding: 10px 15px;
-  border-top: 1px solid var(--site-white-color);
+  padding: 10px 0;
+  border-top: 1px solid var(--site-line);
+  position: relative;
 }
 
-.WeatherUpcomingInfoModule span {
+.WeatherUpcomingInfoModule .TableModule{
+  display: table;
+  width: 100%;
+}
+
+.WeatherUpcomingInfoModule .LeftModule{
+  display: table-cell;
+  width: 65%;
+  vertical-align: middle;
+}
+
+.WeatherUpcomingInfoModule .RightModule{
+  display: table-cell;
+  vertical-align: middle;
+  width: 35%;
+  text-align: right;
+  padding-right: 30px;
+  background-size: 20px;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/weather-widget/arrow-down.svg");
+}
+
+.WeatherUpcomingInfoModule input[type=checkbox]{
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+
+.WeatherUpcomingInfoModule .AccordionModule{
+  font-size: 18px;
+  color: var(--site-text-color);
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.WeatherUpcomingInfoModule input[type=checkbox]:checked ~ .AccordionModule{
+  padding: 15px 0 0;
+  height: 20px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.WeatherUpcomingInfoModule input[type=checkbox]:checked ~ .TableModule .RightModule{
+  background-image: url("../assets/images/weather-widget/arrow-up.svg");
+}
+
+.WeatherUpcomingInfoModule .AccordionModule span{
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.WeatherUpcomingInfoModule span.ForecastDay {
   display: inline-block;
   vertical-align: middle;
-  font-family: var(--primary-font-bold);
   margin-right: 5px;
   min-width: 30px;
 }
 
 .WeatherUpcomingInfoModule small {
-  font-size: 16px;
-  margin-right: 5px;
+  margin-right: 40px;
   display: inline-block;
   vertical-align: middle;
-  width: 42px;
+  width: 54px;
 }
 
 .WeatherUpcomingInfoModule i {
   vertical-align: middle;
-  font-size: 50px;
-  color: #fff;
-  margin-bottom: 6px;
+  font-size: 34px;
+  color: var(--site-primary);
 }
 
 .WeatherUpcomingInfoModule i img {

@@ -32,7 +32,7 @@ export default ({
     className={cx(
       selectionStyles.Container,
       styles.Container,
-      globalStyles.ImageBackground,
+      globalStyles.ColoredBackgroundTypeOne,
       globalStyles.GotResultBG
     )}
   >
@@ -60,7 +60,7 @@ export default ({
                   <div className={cx(globalStyles.GotResultTick)} />
 
                   <div className={cx(globalStyles.GotResultInfo)}>
-                    <span>Die berechnete Flä̈che beträgt</span>
+                    <span>Die berechnete Fläche beträgt</span>
                     <ProcessArea />
                   </div>
 
@@ -75,8 +75,7 @@ export default ({
                       key="buttonLive"
                       onClick={() => goTo("/calculate-amount")}
                       className={cx(
-                        globalStyles.ActionButtonCalculate,
-                        globalStyles.inactive
+                        globalStyles.ActionButtonCalculate
                       )}
                     />
 
@@ -84,8 +83,7 @@ export default ({
                       key="buttonLive"
                       onClick={() => goTo("/find-trader")}
                       className={cx(
-                        globalStyles.ActionButtonLocation,
-                        globalStyles.inactive
+                        globalStyles.ActionButtonLocation
                       )}
                     />
 
@@ -93,8 +91,7 @@ export default ({
                       key="buttonLive"
                       onClick={() => goTo("/calibration-capture")}
                       className={cx(
-                        globalStyles.ActionButtonTrash,
-                        globalStyles.inactive
+                        globalStyles.ActionButtonTrash
                       )}
                     />
                   </div>

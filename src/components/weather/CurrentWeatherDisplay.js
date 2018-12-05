@@ -68,8 +68,8 @@ class CurrentWeatherDisplay extends Component {
               name="newlocation"
               id="newlocation"
             />
-            <span onClick={this.handleChangeSubmit}>Submit </span>
-            <span onClick={this.handleCancelChangeLocation}>Cancel </span>
+            <span onClick={this.handleChangeSubmit}>Submit</span>
+            <span onClick={this.handleCancelChangeLocation}>Cancel</span>
           </th>
         </tr>
       );
@@ -104,25 +104,8 @@ class CurrentWeatherDisplay extends Component {
           </div>
           <div className={cx(globalStyles.WeatherWidgetSecondaryPart)}>
             <div className={cx(globalStyles.WeatherCondition)}>
-              <i className={cx(globalStyles.BestCondition)} />
               <span className={cx(globalStyles.BestCondition)}>
                 {weather.description}
-              </span>
-            </div>
-          </div>
-          <div className={cx(globalStyles.WeatherWidgetSecondaryPart)}>
-            <div className={cx(globalStyles.WeatherCondition)}>
-              <span
-                className={cx(
-                  globalStyles.BestCondition,
-                  globalStyles.PrimaryTextColor
-                )}
-              >
-                Taupunkt:{" "}
-                <TaupunktDisplay
-                  humidity={weather.temperature.humidity}
-                  temperature={weather.temperature.maximum}
-                />
               </span>
             </div>
           </div>
@@ -133,15 +116,19 @@ class CurrentWeatherDisplay extends Component {
               <thead>{heading}</thead>
               <tbody>
                 <tr>
+                  <td>Taupunkt</td>
+                  <td><TaupunktDisplay humidity={weather.temperature.humidity} temperature={weather.temperature.maximum} /></td>
+                </tr>
+                <tr>
                   <td>Niederschlag</td>
                   <td>{weather.rain}%</td>
                 </tr>
                 <tr>
-                  <td>Feuchtigkeit:</td>
+                  <td>Feuchtigkeit</td>
                   <td>{weather.temperature.humidity}%</td>
                 </tr>
                 <tr>
-                  <td>Wind:</td>
+                  <td>Wind</td>
                   <td>{weather.wind.speed}km/h</td>
                 </tr>
                 <tr>

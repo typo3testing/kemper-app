@@ -135,7 +135,7 @@ export default ({
                   <div className={cx(globalStyles.IconBlock)}>
                     <img
                       src={require("../../../assets/images/icons/location-icon-primary.svg")}
-                      width="25"
+                      width="27"
                     />
                   </div>
                   <div

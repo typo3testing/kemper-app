@@ -20,13 +20,13 @@ export default class CalculatorResult extends React.Component {
     let area = sessionStorage.getItem("area");
     area = area.toString().replace(",", ".");
     console.log(
-      "http://kemperol.vonuebermorgen.de/?api=kemper&action=calculator&product=" +
+      "http://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
         product +
         "&area=" +
         area
     );
     fetch(
-      "http://kemperol.vonuebermorgen.de/?api=kemper&action=calculator&product=" +
+      "http://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
         product +
         "&area=" +
         area
@@ -77,12 +77,13 @@ export default class CalculatorResult extends React.Component {
     return (
       <div>
         <h4>Berechnete Mengen</h4>
-        <p>Produkt / Systemaufbau: {this.state.product_name}</p>
+        <p>Produkt / Systemaufbau: <br/>{this.state.product_name}</p>
         <p>Fläche: {this.state.area} qm</p>
-        <h5>Benötigte Menge</h5>
-
-        <div className={cx(globalStyles.ListingResultModule)}>
-          {contentTemplate}
+        <div className={cx(globalStyles.ResultModule)}>
+          <h5>Benötigte Menge</h5>
+          <div className={cx(globalStyles.ListingResultModule)}>
+            {contentTemplate}
+          </div>
         </div>
       </div>
     );

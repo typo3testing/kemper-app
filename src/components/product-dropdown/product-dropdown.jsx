@@ -33,9 +33,9 @@ export default class ProductDropDown extends React.Component {
     let initialPlanets = [];
     if (sessionStorage.getItem("initialProductList") == null) {
       console.log(
-        "http://kemperol.vonuebermorgen.de/?api=kemper&action=product"
+        "http://kemperol.kemper-system.de/?api=kemper&action=product"
       );
-      fetch("http://kemperol.vonuebermorgen.de/?api=kemper&action=product")
+      fetch("http://kemperol.kemper-system.de/?api=kemper&action=product")
         .then(response => {
           return response.json();
         })

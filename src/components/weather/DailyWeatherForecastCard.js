@@ -31,19 +31,22 @@ const DailyWeatherForecastCard = ({ forecast }) => {
     return (
       <tr>
         <td>
-          <span>{getDate(forecast.date)}</span>
-          <small>{getTime(forecast.date)}</small>
-          <i className={`weather-wi weather-wi-owm-${forecast.icon}`} />
-          <br />
-          Taupunkt{" "}
-          <TaupunktDisplay
-            humidity={forecast.temperature.humidity}
-            temperature={forecast.temperature.maximum}
-          />
-        </td>
-        <td>
-          {parseInt(forecast.temperature.maximum)}&deg; /{" "}
-          {parseInt(forecast.temperature.minimum)}&deg;
+          <input type="checkbox" />
+          <div className={cx(globalStyles.TableModule)}>
+            <div className={cx(globalStyles.LeftModule)}>
+              <span className={cx(globalStyles.ForecastDay)}>{getDate(forecast.date)}</span>
+              <small>{getTime(forecast.date)}</small>
+              <i className={`weather-wi weather-wi-owm-${forecast.icon}`} />
+            </div>
+            <div className={cx(globalStyles.RightModule)}>
+              {parseInt(forecast.temperature.maximum)}&deg; /{" "}
+              {parseInt(forecast.temperature.minimum)}&deg;
+            </div>
+          </div>
+          <div className={cx(globalStyles.AccordionModule)}>
+            <span>Taupunkt:</span>
+            <TaupunktDisplay humidity={forecast.temperature.humidity} temperature={forecast.temperature.maximum} />
+          </div>
         </td>
       </tr>
     );
