@@ -6,6 +6,9 @@ import globalStyles from "../../../css/global.css";
 
 import { GoogleApiWrapper, InfoWindow, Map, Marker } from "google-maps-react";
 
+import { ApiService } from "../../services/ApiService";
+const apiService = new ApiService();
+
 export class DealerFinder extends React.Component {
   constructor(props) {
     super(props);
@@ -24,20 +27,14 @@ export class DealerFinder extends React.Component {
   componentDidMount() {
     let land = sessionStorage.getItem("land");
     let postalcode = sessionStorage.getItem("postalcode");
-    fetch(
-      "https://kemperol.kemper-system.de/?api=kemper&action=map&land=" +
-        land +
-        "&postalcode=" +
-        postalcode
-    )
-      .then(response => {
-        return response.json();
-      })
+    apiService
+      .findDealer({ land, postalcode })
       .then(data => {
-        this.setState({ content: data.results.content });
+        this.setState({ content: data.content });
         this.setState({ dataReady: false });
-        console.log(data.results.content);
-      });
+        console.log(data.content);
+      })
+      .catch(error => console.log(error));
   }
 
   onMarkerClick(props, marker, e) {

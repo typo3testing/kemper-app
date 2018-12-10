@@ -4,13 +4,17 @@ import { Redirect } from "react-router";
 import styles from "./product-dropdown.css";
 import globalStyles from "../../../css/global.css";
 
+import { ApiService } from "../../services/ApiService";
+const apiService = new ApiService();
+
 export default class ProductDropDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       values: [],
       redirect: false,
-      area_capture: ""
+      area_capture: "",
+      preloader: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -32,15 +36,10 @@ export default class ProductDropDown extends React.Component {
   componentDidMount() {
     let initialPlanets = [];
     if (sessionStorage.getItem("initialProductList") == null) {
-      console.log(
-        "https://kemperol.kemper-system.de/?api=kemper&action=product"
-      );
-      fetch("https://kemperol.kemper-system.de/?api=kemper&action=product")
-        .then(response => {
-          return response.json();
-        })
+      apiService
+        .getProduct()
         .then(data => {
-          initialPlanets = data.results.map(planet => {
+          initialPlanets = data.map(planet => {
             return planet;
           });
           sessionStorage.setItem(
@@ -50,7 +49,9 @@ export default class ProductDropDown extends React.Component {
           this.setState({
             values: initialPlanets
           });
-        });
+          this.setState({ preloader: false });
+        })
+        .catch(error => console.log(error));
     } else {
       // console.log(JSON.parse(sessionStorage.getItem('initialProductList')));
       let initialPlanets = JSON.parse(
@@ -59,6 +60,7 @@ export default class ProductDropDown extends React.Component {
       this.setState({
         values: initialPlanets
       });
+      this.setState({ preloader: false });
     }
     this.setState({ area_capture: sessionStorage.getItem("area_capture") });
     // this.setState({area_capture: 'ok'});
@@ -74,6 +76,28 @@ export default class ProductDropDown extends React.Component {
     });
   }
   render() {
+    if (this.state.preloader) {
+      return (
+        <div
+          className={cx(
+            globalStyles.CustomLoading,
+            globalStyles.PullTextCenter
+          )}
+        >
+          <div className={cx(globalStyles.Tablewrap)}>
+            <div
+              className={cx(
+                globalStyles.Tablecell,
+                globalStyles.Tablemiddleline
+              )}
+            >
+              Wird geladen...
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     let optionTemplate = this.state.values.map(v => (
       <optgroup key={v.title} label={v.title}>
         {this.renderSublist(v.child)}

@@ -4,6 +4,9 @@ import { Redirect } from "react-router";
 import styles from "./calculator-result.css";
 import globalStyles from "../../../css/global.css";
 
+import { ApiService } from "../../services/ApiService";
+const apiService = new ApiService();
+
 export default class CalculatorResult extends React.Component {
   constructor(props) {
     super(props);
@@ -19,29 +22,18 @@ export default class CalculatorResult extends React.Component {
     let product = sessionStorage.getItem("product");
     let area = sessionStorage.getItem("area");
     area = area.toString().replace(",", ".");
-    console.log(
-      "https://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
-        product +
-        "&area=" +
-        area
-    );
-    fetch(
-      "https://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
-        product +
-        "&area=" +
-        area
-    )
-      .then(response => {
-        return response.json();
-      })
+
+    apiService
+      .getProductCalculator({ product, area })
       .then(data => {
-        this.setState({ product_name: data.results.product_name });
-        this.setState({ area: data.results.area });
-        this.setState({ product_uid: data.results.product_uid });
-        this.setState({ content: data.results.content });
+        this.setState({ product_name: data.product_name });
+        this.setState({ area: data.area });
+        this.setState({ product_uid: data.product_uid });
+        this.setState({ content: data.content });
         this.setState({ dataReady: false });
-        console.log(data.results.content);
-      });
+        console.log(data.content);
+      })
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -77,7 +69,10 @@ export default class CalculatorResult extends React.Component {
     return (
       <div>
         <h4>Berechnete Mengen</h4>
-        <p>Produkt / Systemaufbau: <br/>{this.state.product_name}</p>
+        <p>
+          Produkt / Systemaufbau: <br />
+          {this.state.product_name}
+        </p>
         <p>Fläche: {this.state.area} qm</p>
         <div className={cx(globalStyles.ResultModule)}>
           <h5>Benötigte Menge</h5>

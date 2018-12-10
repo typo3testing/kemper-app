@@ -4,6 +4,9 @@ import { Redirect } from "react-router";
 import styles from "./news-result.css";
 import globalStyles from "../../../css/global.css";
 
+import { ApiService } from "../../services/ApiService";
+const apiService = new ApiService();
+
 export default class NewsResult extends React.Component {
   constructor(props) {
     super(props);
@@ -25,19 +28,18 @@ export default class NewsResult extends React.Component {
   }
   componentDidMount() {
     if (sessionStorage.getItem("initialNewsList") == null) {
-      fetch("https://kemperol.kemper-system.de/?api=kemper&action=news")
-        .then(response => {
-          return response.json();
-        })
+      apiService
+        .getNews()
         .then(data => {
           sessionStorage.setItem(
             "initialNewsList",
-            JSON.stringify(data.results.content)
+            JSON.stringify(data.content)
           );
-          this.setState({ content: data.results.content });
+          this.setState({ content: data.content });
           this.setState({ dataReady: false });
-          console.log(data.results.content);
-        });
+          //  console.log(data.content);
+        })
+        .catch(error => console.log(error));
     } else {
       let initialNews = JSON.parse(sessionStorage.getItem("initialNewsList"));
       this.setState({

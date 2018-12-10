@@ -4,12 +4,17 @@ import { Redirect } from "react-router";
 import styles from "./land-dropdown.css";
 import globalStyles from "../../../css/global.css";
 
+import { ApiService } from "../../services/ApiService";
+
+const apiService = new ApiService();
+
 export default class LandDropDown extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       values: [],
-      redirect: false
+      redirect: false,
+      preloader: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -26,13 +31,12 @@ export default class LandDropDown extends React.Component {
 
   componentDidMount() {
     let initialPlanets = [];
+
     if (sessionStorage.getItem("initialLandList") == null) {
-      fetch("https://kemperol.kemper-system.de/?api=kemper&action=land")
-        .then(response => {
-          return response.json();
-        })
+      apiService
+        .getLand()
         .then(data => {
-          initialPlanets = data.results.map(planet => {
+          initialPlanets = data.map(planet => {
             return planet;
           });
           sessionStorage.setItem(
@@ -42,7 +46,9 @@ export default class LandDropDown extends React.Component {
           this.setState({
             values: initialPlanets
           });
-        });
+          this.setState({ preloader: false });
+        })
+        .catch(error => console.log(error));
     } else {
       // console.log(JSON.parse(sessionStorage.getItem('initialLandList')));
       let initialPlanets = JSON.parse(
@@ -51,10 +57,33 @@ export default class LandDropDown extends React.Component {
       this.setState({
         values: initialPlanets
       });
+      this.setState({ preloader: false });
     }
   }
 
   render() {
+    if (this.state.preloader) {
+      return (
+        <div
+          className={cx(
+            globalStyles.CustomLoading,
+            globalStyles.PullTextCenter
+          )}
+        >
+          <div className={cx(globalStyles.Tablewrap)}>
+            <div
+              className={cx(
+                globalStyles.Tablecell,
+                globalStyles.Tablemiddleline
+              )}
+            >
+              Wird geladen...
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     let optionTemplate = this.state.values.map(v => (
       <option key={v.id} value={v.id}>
         {v.name}
