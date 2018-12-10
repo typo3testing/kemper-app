@@ -27,7 +27,7 @@ export default class LandDropDown extends React.Component {
   componentDidMount() {
     let initialPlanets = [];
     if (sessionStorage.getItem("initialLandList") == null) {
-      fetch("http://kemperol.kemper-system.de/?api=kemper&action=land")
+      fetch("https://kemperol.kemper-system.de/?api=kemper&action=land")
         .then(response => {
           return response.json();
         })

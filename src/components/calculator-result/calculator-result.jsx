@@ -20,13 +20,13 @@ export default class CalculatorResult extends React.Component {
     let area = sessionStorage.getItem("area");
     area = area.toString().replace(",", ".");
     console.log(
-      "http://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
+      "https://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
         product +
         "&area=" +
         area
     );
     fetch(
-      "http://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
+      "https://kemperol.kemper-system.de/?api=kemper&action=calculator&product=" +
         product +
         "&area=" +
         area

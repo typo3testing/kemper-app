@@ -25,7 +25,7 @@ export class DealerFinder extends React.Component {
     let land = sessionStorage.getItem("land");
     let postalcode = sessionStorage.getItem("postalcode");
     fetch(
-      "http://kemperol.kemper-system.de/?api=kemper&action=map&land=" +
+      "https://kemperol.kemper-system.de/?api=kemper&action=map&land=" +
         land +
         "&postalcode=" +
         postalcode

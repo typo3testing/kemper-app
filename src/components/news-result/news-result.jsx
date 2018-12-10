@@ -25,7 +25,7 @@ export default class NewsResult extends React.Component {
   }
   componentDidMount() {
     if (sessionStorage.getItem("initialNewsList") == null) {
-      fetch("http://kemperol.kemper-system.de/?api=kemper&action=news")
+      fetch("https://kemperol.kemper-system.de/?api=kemper&action=news")
         .then(response => {
           return response.json();
         })
