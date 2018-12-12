@@ -23,7 +23,7 @@ export default ({
 }) => (
   <div>
     <div className={cx(styles.Step, styles.Windows)}>
-      <HeaderBar goBack />
+      <HeaderBar goHome />
 
       <div className={styles.CrossHairWrapper}>
         <div className={styles.CrossHair} />

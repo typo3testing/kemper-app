@@ -24,7 +24,7 @@ export default ({
 }) => (
   <div>
     <div className={cx(styles.Step, styles.Walls)}>
-      <HeaderBar goBack />
+      <HeaderBar goHome />
 
       {length > 0 && (
         <div
