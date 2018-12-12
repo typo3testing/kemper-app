@@ -231,7 +231,7 @@ a:visited {
   --site-primary-light: #f2f5f7;
   --site-dark: #6a818e;
   --site-success: #2fdc64;
-  --site-line: #C5D7E2;
+  --site-line: #c5d7e2;
   --primary-font-bold: "HelveticaNeue-bold";
   --primary-font-light: "HelveticaNeue-light";
   --primary-font-medium: "HelveticaNeue-medium";
@@ -875,7 +875,7 @@ span.ActionButtonDelete.inactive {
 }
 
 .PageButton.PrimaryColorButton {
-  background-color: var(--site-darker-white);
+  background-color: var(--site-white-color);
   color: var(--site-primary);
   background-image: url("../assets/images/icons/right-direction-primary-color-arrow.svg");
 }
@@ -1541,18 +1541,18 @@ span.ActionButtonDelete.inactive {
   position: relative;
 }
 
-.WeatherUpcomingInfoModule .TableModule{
+.WeatherUpcomingInfoModule .TableModule {
   display: table;
   width: 100%;
 }
 
-.WeatherUpcomingInfoModule .LeftModule{
+.WeatherUpcomingInfoModule .LeftModule {
   display: table-cell;
   width: 65%;
   vertical-align: middle;
 }
 
-.WeatherUpcomingInfoModule .RightModule{
+.WeatherUpcomingInfoModule .RightModule {
   display: table-cell;
   vertical-align: middle;
   width: 35%;
@@ -1564,7 +1564,7 @@ span.ActionButtonDelete.inactive {
   background-image: url("../assets/images/weather-widget/arrow-down.svg");
 }
 
-.WeatherUpcomingInfoModule input[type=checkbox]{
+.WeatherUpcomingInfoModule input[type="checkbox"] {
   position: absolute;
   cursor: pointer;
   width: 100%;
@@ -1577,7 +1577,7 @@ span.ActionButtonDelete.inactive {
   top: 0;
 }
 
-.WeatherUpcomingInfoModule .AccordionModule{
+.WeatherUpcomingInfoModule .AccordionModule {
   font-size: 18px;
   color: var(--site-text-color);
   height: 0;
@@ -1585,19 +1585,21 @@ span.ActionButtonDelete.inactive {
   transition: all 0.3s ease-in-out;
 }
 
-
-.WeatherUpcomingInfoModule input[type=checkbox]:checked ~ .AccordionModule{
+.WeatherUpcomingInfoModule input[type="checkbox"]:checked ~ .AccordionModule {
   padding: 15px 0 0;
   height: 20px;
   visibility: visible;
   opacity: 1;
 }
 
-.WeatherUpcomingInfoModule input[type=checkbox]:checked ~ .TableModule .RightModule{
+.WeatherUpcomingInfoModule
+  input[type="checkbox"]:checked
+  ~ .TableModule
+  .RightModule {
   background-image: url("../assets/images/weather-widget/arrow-up.svg");
 }
 
-.WeatherUpcomingInfoModule .AccordionModule span{
+.WeatherUpcomingInfoModule .AccordionModule span {
   display: inline-block;
   padding-right: 20px;
 }
