@@ -1,5 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import cx from "classnames";
+
+import CanvasDraw from "react-canvas-draw";
 
 import HeaderBar from "../../components/header-bar/header-bar";
 
@@ -69,7 +71,9 @@ export default ({
           >
             {currentScreenshotPath && (
               <div className={cx(globalStyles.CapturedImage)}>
-                <CameraShot src={getScreenshotImage()} />
+                <CanvasDraw imgSrc={getScreenshotImage()} ref={canvasDraw => (this.saveableCanvas = canvasDraw)} brushColor="#005192" lazyRadius="0" canvasWidth="100%" brushRadius="5" catenaryColor="rgba(0,0,0,0)" loadTimeOffset="0" />
+                <button onClick={() => { localStorage.setItem( "savedDrawing", this.saveableCanvas.getSaveData()); }}> Save </button>
+                <button onClick={() => { this.saveableCanvas.clear(); }}> Clear </button>
               </div>
             )}
 
