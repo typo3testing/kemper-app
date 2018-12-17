@@ -208,6 +208,13 @@ export default ({
         globalStyles.CustomButtonBar
       )}
     >
+
+      <TextButton
+        onClick={() => goTo("/measurement")}
+        icon={"MenuMeasurement"}
+        className={cx(selectionStyles.Button)}
+      />
+
       <TextButton
         onClick={() => goTo("/calculate-amount")}
         icon={"MenuCalculator"}

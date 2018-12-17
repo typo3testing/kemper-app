@@ -18,6 +18,7 @@ import ShopFinder from "./views/shop-finder/shop-finder.js";
 import CustomPage from "./views/custom-page/custom-page.js";
 import Help from "./views/help/help.js";
 import CalculateAmount from "./views/calculate-amount/calculate-amount.js";
+import Measurement from "./views/measurement/measurement.js";
 import FindTrader from "./views/find-trader/find-trader.js";
 import News from "./views/news/news.js";
 import Weather from "./views/weather/weather.js";
@@ -108,6 +109,7 @@ export default ({}) => (
           <Route exact path="/custom-page" component={CustomPage} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/calculate-amount" component={CalculateAmount} />
+          <Route exact path="/measurement" component={Measurement} />
           <Route exact path="/find-trader" component={FindTrader} />
           <Route exact path="/news" component={News} />
           <Route exact path="/weather" component={Weather} />

@@ -31,7 +31,8 @@ export default ({
   emailScreenshot,
   cancelScreenshot,
   capture,
-  subjectValue
+  subjectValue,
+  saveableCanvas
 }) => (
   <div className={cx(selectionStyles.Container, styles.Container)}>
     {!capture && <div className={cx(globalStyles.CapturedAreaAtbg)} />}

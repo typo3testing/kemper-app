@@ -79,6 +79,12 @@ export default ({
       )}
     >
       <TextButton
+        onClick={() => goTo("/measurement")}
+        icon={"MenuMeasurement"}
+        className={cx(selectionStyles.Button)}
+      />
+      
+      <TextButton
         onClick={() => goTo("/calculate-amount")}
         icon={"MenuCalculatorCurrent"}
         className={cx(selectionStyles.Button)}

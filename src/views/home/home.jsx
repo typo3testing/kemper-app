@@ -68,6 +68,12 @@ export default ({ goTo, showAuthDialog }) => (
       )}
     >
       <TextButton
+        onClick={() => goTo("/measurement")}
+        icon={"MenuMeasurement"}
+        className={cx(selectionStyles.Button)}
+      />
+
+      <TextButton
         onClick={() => goTo("/calculate-amount")}
         icon={"MenuCalculator"}
         className={cx(selectionStyles.Button)}

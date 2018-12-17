@@ -153,6 +153,15 @@
   background-size: 42px;
 }
 
+.TextButton.icon-MenuMeasurement .Image {
+  background-image: url("../../../assets/images/icons/measure-icon-secondary.svg");
+  background-size: 48px;
+}
+.TextButton.icon-MenuMeasurementCurrent .Image {
+  background-image: url("../../../assets/images/icons/measure-icon-primary.svg");
+  background-size: 48px;
+}
+
 .TextButton.icon-MenuCalculator .Image {
   background-image: url("../../../assets/images/icons/calculator-icon-secondary.svg");
   background-size: 28px;
@@ -328,8 +337,8 @@
 @media only screen and (orientation: portrait) and (max-height: 736px),
   screen and (orientation: portrait) and (max-width: 414px) {
   .TextButton {
-    width: 15%;
-    padding: 0 8px;
+    width: 12%;
+    padding: 0 6px;
   }
 
   .Text {

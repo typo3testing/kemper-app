@@ -3,18 +3,15 @@ import cx from "classnames";
 
 import HeaderBar from "../../components/header-bar/header-bar";
 
-import styles from "./news.css";
+import styles from "./measurement.css";
 import selectionStyles from "../selection-view.css";
 import globalStyles from "../../../css/global.css";
 
 import TextButton from "../../components/text-button/text-button";
 import Button from "../../components/button/button";
+import ProductDropDown from "../../components/product-dropdown/product-dropdown.jsx";
 
 import { getProperBackgroundClass } from "../../utils/is-edge";
-
-import NewsResult from "../../components/news-result/news-result.jsx";
-
-import TakeShot from "../../components/take-shot/take-shot.jsx";
 
 export default ({
   goTo,
@@ -50,8 +47,23 @@ export default ({
               )}
             >
               <div className={cx(globalStyles.Entry)}>
-                <h4>Neuigkeiten von KEMPEROL</h4>
-                <NewsResult />
+                <h4>Einfach die passende Menge berechen</h4>
+              </div>
+            </div>
+
+            <div
+              className={cx(
+                globalStyles.Element,
+                globalStyles.ElementGapMedium
+              )}
+            >
+              <div
+                className={cx(
+                  globalStyles.SiteFormModule,
+                  globalStyles.Clearfix
+                )}
+              >
+                <ProductDropDown />
               </div>
             </div>
           </div>
@@ -66,13 +78,12 @@ export default ({
         globalStyles.CustomButtonBar
       )}
     >
-
       <TextButton
         onClick={() => goTo("/measurement")}
-        icon={"MenuMeasurement"}
+        icon={"MenuMeasurementCurrent"}
         className={cx(selectionStyles.Button)}
       />
-
+      
       <TextButton
         onClick={() => goTo("/calculate-amount")}
         icon={"MenuCalculator"}
@@ -96,7 +107,7 @@ export default ({
 
       <TextButton
         onClick={() => goTo("/news")}
-        icon={"ReleasedNewsCurrent"}
+        icon={"ReleasedNews"}
         className={cx(selectionStyles.Button)}
       />
 
