@@ -3,13 +3,13 @@ import cx from "classnames";
 
 import HeaderBar from "../../components/header-bar/header-bar";
 
-import styles from "./measurement.css";
+import styles from "./haftzugmessung.css";
 import selectionStyles from "../selection-view.css";
 import globalStyles from "../../../css/global.css";
 
 import TextButton from "../../components/text-button/text-button";
 import Button from "../../components/button/button";
-import MeasurementDropdown from "../../components/measurement-dropdown/measurement-dropdown.jsx";
+import HaftzugmessungCalculation from "../../components/haftzugmessung-calculation/haftzugmessung-calculation.jsx";
 
 import { getProperBackgroundClass } from "../../utils/is-edge";
 
@@ -63,7 +63,7 @@ export default ({
                   globalStyles.Clearfix
                 )}
               >
-                <MeasurementDropdown />
+                <HaftzugmessungCalculation />
               </div>
             </div>
           </div>

@@ -76,6 +76,52 @@ const getNewsData = url => {
   });
 };
 
+
+const getManufacturerData = url => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(url)
+      .then(response => {
+        if (response && response.status === 200) {
+          resolve(response.data.results);
+        } else {
+          reject("Manufacturer data not found");
+        }
+      })
+      .catch(error => reject(error.message));
+  });
+};
+
+const getDesignationData = url => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(url)
+      .then(response => {
+        if (response && response.status === 200) {
+          resolve(response.data.results);
+        } else {
+          reject("Designation data not found");
+        }
+      })
+      .catch(error => reject(error.message));
+  });
+};
+
+const getDesignationCategoryData = url => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(url)
+      .then(response => {
+        if (response && response.status === 200) {
+          resolve(response.data.results);
+        } else {
+          reject("Designation Category data not found");
+        }
+      })
+      .catch(error => reject(error.message));
+  });
+};
+
 class ApiService {
   getLand() {
     const url = `${API_BASE_URL}?api=kemper&action=land`;
@@ -105,6 +151,21 @@ class ApiService {
     const url = `${API_BASE_URL}?api=kemper&action=news`;
     console.log(url);
     return getNewsData(url);
+  }
+  getManufacturer() {
+    const url = `${API_BASE_URL}?api=kemper&action=haftzu`;
+    console.log(url);
+    return getManufacturerData(url);
+  }
+  getDesignation({manufacturer}) {
+    const url = `${API_BASE_URL}?api=kemper&action=manuhaftzu&manufacturer=${manufacturer}`;
+    console.log(url);
+    return getDesignationData(url);
+  }
+  getDesignationCategory({designation}) {
+    const url = `${API_BASE_URL}?api=kemper&action=haftzudetails&designation=${designation}`;
+    console.log(url);
+    return getDesignationCategoryData(url);
   }
 }
 

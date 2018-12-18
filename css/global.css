@@ -1737,4 +1737,98 @@ span.ActionButtonDelete.inactive {
   }
 }
 
+
+
 /*custom style*/
+
+
+
+/* list module */
+
+.LinkBoxModule{
+margin-left: -10px;
+margin-right: -10px;
+}
+
+.LinkBoxModule .LinkBox{
+width: 100%;
+float: left;
+margin-top: 20px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.LinkBoxModule .LinkBox:nth-child(1){
+margin-top: 0px;
+}
+
+.LinkBoxModule .LinkBoxElement{
+color: #fff;
+font-size: 17px;
+position: relative;
+transition: 0.5s all ease;
+}
+
+.LinkBoxModule .LinkBoxElement a{
+color: #fff;
+display: block;
+background-position: center right 10px;
+background-repeat: no-repeat;
+background-size: 12px;
+background-image: url("../assets/images/icons/right-direction-white-color-arrow.svg");
+position: relative;
+transition: 0.5s all ease;
+}
+
+.LinkBoxModule .LinkBoxElement.LinkBoxPrimaryPart:before{
+content: ' ';
+transition: 0.5s all ease;
+position: absolute;
+top: 0;
+left: 50%;
+right: 50%;
+bottom: 0;
+opacity: 0;
+background-color: #fff;
+}
+
+.LinkBoxModule .LinkBoxElement.LinkBoxPrimaryPart:hover:before{
+left: 0px;
+right: 0px;
+opacity: 1;
+}
+
+.LinkBoxModule .LinkBoxElement.LinkBoxPrimaryPart:hover, .LinkBoxModule .LinkBoxElement.LinkBoxPrimaryPart:hover a{
+color: #005192;
+}
+
+.LinkBoxModule .LinkBoxElement.LinkBoxPrimaryPart:hover a{
+background-image: url("../assets/images/icons/right-direction-primary-color-arrow.svg");
+}
+
+.LinkBoxModule .LinkBoxElement.LinkBoxPrimaryPart{
+background-color: #005192;
+text-transform: uppercase;
+}
+
+.LinkBoxModule .LinkBoxElement.LinkBoxSecondaryPart{
+border: 3px solid #fff;;
+color: #005192;
+}
+
+.LinkBoxModule .LinkBoxElement .MainWrap{
+padding: 25px 35px 25px 10px;
+position: relative;
+z-index: 1;
+}
+/* list module */
+
+@media only screen and (orientation: landscape){
+    .LinkBoxModule .LinkBox{
+    width: 50%;
+  }
+
+  .LinkBoxModule .LinkBox:nth-child(2){
+    margin-top: 0px;
+  }
+}
