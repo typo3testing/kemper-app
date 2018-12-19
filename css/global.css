@@ -1587,7 +1587,7 @@ span.ActionButtonDelete.inactive {
 
 .WeatherUpcomingInfoModule input[type="checkbox"]:checked ~ .AccordionModule {
   padding: 15px 0 0;
-  height: 20px;
+  height: 70px;
   visibility: visible;
   opacity: 1;
 }
@@ -1602,6 +1602,11 @@ span.ActionButtonDelete.inactive {
 .WeatherUpcomingInfoModule .AccordionModule span {
   display: inline-block;
   padding-right: 20px;
+}
+
+.WeatherUpcomingInfoModule .AccordionModule p{
+  margin: 0;
+  padding: 5px 0;
 }
 
 .WeatherUpcomingInfoModule span.ForecastDay {

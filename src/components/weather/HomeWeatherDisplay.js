@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import globalStyles from "../../../css/global.css";
 
 import { TaupunktDisplay } from "./TaupunktDisplay";
+import { OberflachenDisplay } from "./OberflachenDisplay";
 
 const HomeWeatherDisplay = props => {
   const { weather } = props;
@@ -37,6 +38,13 @@ const HomeWeatherDisplay = props => {
         <div className={cx(globalStyles.WeatherWidgetTaupunkt)}>
           Taupunkt:{" "}
           <TaupunktDisplay
+            humidity={weather.temperature.humidity}
+            temperature={weather.temperature.maximum}
+          />
+        </div>
+        <div className={cx(globalStyles.WeatherWidgetTaupunkt)}>
+          Oberflächentemperatur:{" "}
+          <OberflachenDisplay
             humidity={weather.temperature.humidity}
             temperature={weather.temperature.maximum}
           />

@@ -8,6 +8,7 @@ import { Route, Redirect } from "react-router";
 import globalStyles from "../../../css/global.css";
 
 import { TaupunktDisplay } from "./TaupunktDisplay";
+import { OberflachenDisplay } from "./OberflachenDisplay";
 
 // IMPORT PROJECT SERVICES
 import { WeatherService } from "../../services/WeatherService";
@@ -118,6 +119,10 @@ class CurrentWeatherDisplay extends Component {
                 <tr>
                   <td>Taupunkt</td>
                   <td><TaupunktDisplay humidity={weather.temperature.humidity} temperature={weather.temperature.maximum} /></td>
+                </tr>
+                <tr>
+                  <td>Oberflächentemperatur</td>
+                  <td><OberflachenDisplay humidity={weather.temperature.humidity} temperature={weather.temperature.maximum} /></td>
                 </tr>
                 <tr>
                   <td>Niederschlag</td>

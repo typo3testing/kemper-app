@@ -4,6 +4,7 @@ import cx from "classnames";
 import PropTypes from "prop-types";
 import globalStyles from "../../../css/global.css";
 import { TaupunktDisplay } from "./TaupunktDisplay";
+import { OberflachenDisplay } from "./OberflachenDisplay";
 
 const weekday = new Array(7);
 weekday[0] = "So";
@@ -44,8 +45,14 @@ const DailyWeatherForecastCard = ({ forecast }) => {
             </div>
           </div>
           <div className={cx(globalStyles.AccordionModule)}>
-            <span>Taupunkt:</span>
-            <TaupunktDisplay humidity={forecast.temperature.humidity} temperature={forecast.temperature.maximum} />
+            <p>
+              <span>Taupunkt:</span>
+              <TaupunktDisplay humidity={forecast.temperature.humidity} temperature={forecast.temperature.maximum} />
+            </p>
+            <p>
+              <span>Oberflächentemperatur:</span>
+              <OberflachenDisplay humidity={forecast.temperature.humidity} temperature={forecast.temperature.maximum} />
+            </p>
           </div>
         </td>
       </tr>
