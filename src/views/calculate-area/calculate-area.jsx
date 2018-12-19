@@ -74,25 +74,19 @@ export default ({
                     <span
                       key="buttonLive"
                       onClick={() => goTo("/calculate-amount")}
-                      className={cx(
-                        globalStyles.ActionButtonCalculate
-                      )}
+                      className={cx(globalStyles.ActionButtonCalculate)}
                     />
 
                     <span
                       key="buttonLive"
                       onClick={() => goTo("/find-trader")}
-                      className={cx(
-                        globalStyles.ActionButtonLocation
-                      )}
+                      className={cx(globalStyles.ActionButtonLocation)}
                     />
 
                     <span
                       key="buttonLive"
                       onClick={() => goTo("/calibration-capture")}
-                      className={cx(
-                        globalStyles.ActionButtonTrash
-                      )}
+                      className={cx(globalStyles.ActionButtonTrash)}
                     />
                   </div>
                 </div>
@@ -110,6 +104,12 @@ export default ({
         globalStyles.CustomButtonBar
       )}
     >
+      <TextButton
+        onClick={() => goTo("/measurement")}
+        icon={"MenuMeasurement"}
+        className={cx(selectionStyles.Button)}
+      />
+
       <TextButton
         onClick={() => goTo("/calculate-amount")}
         icon={"MenuCalculator"}

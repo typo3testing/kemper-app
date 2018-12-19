@@ -9,7 +9,7 @@ const apiService = new ApiService();
 export default class HaftzugmessungCalculation extends React.Component {
   constructor(props) {
     super(props);
-     this.state = {
+    this.state = {
       content: [],
       dataReady: true
     };
@@ -29,25 +29,29 @@ export default class HaftzugmessungCalculation extends React.Component {
         console.log(initialPlanets);
       })
       .catch(error => console.log(error));
-
   }
 
   render() {
-
-
     let contentTemplate = this.state.content.map(v => (
       <div className={cx(globalStyles.LinkBox)} key={v.id}>
-        <div className={cx(globalStyles.LinkBoxElement, globalStyles.LinkBoxPrimaryPart)}>
-        <a href="#">
-        <div className={cx(globalStyles.MainWrap)}>{v.category}</div>
-        </a>
+        <div
+          className={cx(
+            globalStyles.LinkBoxElement,
+            globalStyles.LinkBoxPrimaryPart
+          )}
+        >
+          <div className={cx(globalStyles.MainWrap)}>{v.category}</div>
         </div>
-        <div className={cx(globalStyles.LinkBoxElement, globalStyles.LinkBoxSecondaryPart)}>
-        <div className={cx(globalStyles.MainWrap)}>{v.title}</div>
+        <div
+          className={cx(
+            globalStyles.LinkBoxElement,
+            globalStyles.LinkBoxSecondaryPart
+          )}
+        >
+          <div className={cx(globalStyles.MainWrap)}>{v.title}</div>
         </div>
       </div>
     ));
-
 
     if (this.state.dataReady) {
       return (
@@ -71,13 +75,9 @@ export default class HaftzugmessungCalculation extends React.Component {
       );
     }
 
-
-
     return (
       <div>
-          <div className={cx(globalStyles.LinkBoxModule)}>
-           {contentTemplate}
-        </div>
+        <div className={cx(globalStyles.LinkBoxModule)}>{contentTemplate}</div>
       </div>
     );
   }
