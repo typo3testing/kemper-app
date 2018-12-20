@@ -1,10 +1,13 @@
 import React from "react";
 import cx from "classnames";
-import { Redirect } from "react-router";
+import { Redirect, Router } from "react-router";
+import { Link } from 'react-router-dom';
 import styles from "./haftzugmessung-calculation.css";
 import globalStyles from "../../../css/global.css";
 
 import { ApiService } from "../../services/ApiService";
+
+
 const apiService = new ApiService();
 export default class HaftzugmessungCalculation extends React.Component {
   constructor(props) {
@@ -40,7 +43,10 @@ export default class HaftzugmessungCalculation extends React.Component {
             globalStyles.LinkBoxPrimaryPart
           )}
         >
-          <div className={cx(globalStyles.MainWrap)}>{v.category}</div>
+          <a href={v.url} target="_blank" rel="opener">
+            <div className={cx(globalStyles.MainWrap)}>{v.category}</div>
+          </a>
+
         </div>
         <div
           className={cx(

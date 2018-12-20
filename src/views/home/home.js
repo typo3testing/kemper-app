@@ -54,6 +54,7 @@ const getGpsPosition = ({ showDialog }) => async () => {
       "cur_local_long",
       parseFloat(position.longitude.toFixed(3))
     );
+    history.push("/home");
     return {
       lat: parseFloat(position.latitude.toFixed(3)),
       lng: parseFloat(position.longitude.toFixed(3))

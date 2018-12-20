@@ -68,6 +68,7 @@ export class DealerFinder extends React.Component {
         position={{ lat: v.latitude, lng: v.longitude }}
         name={v.company}
         key={v.uid}
+        icon={{url: "/assets/images/icons/marker.png"}}
       />
     ));
     if (this.state.dataReady) {
@@ -109,6 +110,7 @@ export class DealerFinder extends React.Component {
         google={this.props.google}
         onClick={this.onMapClick}
         zoom={6}
+        disableDefaultUI={true}
         initialCenter={{ lat: 51.3622808, lng: 9.464591 }}
       >
         {contentTemplate}
@@ -117,7 +119,7 @@ export class DealerFinder extends React.Component {
           visible={this.state.showingInfoWindow}
         >
           <div>
-            <div
+            <div className={cx(globalStyles.MapInfo)}
               dangerouslySetInnerHTML={{
                 __html: this.state.selectedPlace.name
               }}

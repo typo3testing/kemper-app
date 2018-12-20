@@ -1819,6 +1819,12 @@ span.ActionButtonDelete.inactive {
   position: relative;
   z-index: 1;
 }
+
+.MapInfo {
+  color: #607a8a;
+  line-height: 20px;
+  font-size: 14px;
+}
 /* list module */
 
 @media only screen and (orientation: landscape) {
