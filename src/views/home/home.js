@@ -33,11 +33,11 @@ const getGpsPosition = ({ showDialog }) => async () => {
       (!position.longitude && !position.latitude && !position.altitude)
     )
   ) {
-    /*
+    
     showDialog(position.latitude + ' '+ position.longitude, {
         confirmText: 'DialogOK'
     });
-    */
+    
     sessionStorage.setItem(
       "local_lat",
       parseFloat(position.latitude.toFixed(3))
@@ -54,7 +54,7 @@ const getGpsPosition = ({ showDialog }) => async () => {
       "cur_local_long",
       parseFloat(position.longitude.toFixed(3))
     );
-    history.push("/home");
+    //history.push("/home");
     return {
       lat: parseFloat(position.latitude.toFixed(3)),
       lng: parseFloat(position.longitude.toFixed(3))

@@ -43,7 +43,7 @@ export default class HaftzugmessungCalculation extends React.Component {
             globalStyles.LinkBoxPrimaryPart
           )}
         >
-          <a href={v.url} target="_blank" rel="opener">
+          <a href={v.url} target="_blank">
             <div className={cx(globalStyles.MainWrap)}>{v.category}</div>
           </a>
 
