@@ -47,7 +47,7 @@ export default ({
               )}
             >
               <div className={cx(globalStyles.Entry)}>
-                <h4>Einfach die passende Menge berechen</h4>
+                <h4>Einfach die passende Menge berechnen</h4>
               </div>
             </div>
 
