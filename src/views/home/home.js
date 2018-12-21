@@ -20,7 +20,7 @@ import roomCapture from "../../services/room-capturing";
 import Home from "./home.jsx";
 import { withSetToast } from "../../services/loading";
 
-const getGpsPosition = ({ showDialog }) => async () => {
+const getGpsPosition = ({ showDialog, history }) => async () => {
   const position = await viewarApi.coreInterface.call("getGPSData");
 
   // Filter out default longitude/latitude returned from core if no gps signal.
@@ -34,9 +34,9 @@ const getGpsPosition = ({ showDialog }) => async () => {
     )
   ) {
     
-    showDialog(position.latitude + ' '+ position.longitude, {
-        confirmText: 'DialogOK'
-    });
+    // showDialog(position.latitude + ' '+ position.longitude, {
+    //     confirmText: 'DialogOK'
+    // });
     
     sessionStorage.setItem(
       "local_lat",
@@ -54,7 +54,7 @@ const getGpsPosition = ({ showDialog }) => async () => {
       "cur_local_long",
       parseFloat(position.longitude.toFixed(3))
     );
-    //history.push("/home");
+    history.push("/home");
     return {
       lat: parseFloat(position.latitude.toFixed(3)),
       lng: parseFloat(position.longitude.toFixed(3))

@@ -103,6 +103,7 @@ export default ({}) => (
             path="/view-selection-ar"
             component={(...props) => <ViewSelection hasARMode />}
           />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/view-selection" component={ViewSelection} />
           <Route exact path="/room-selection" component={RoomSelection} />
           <Route exact path="/walk" component={Walk} />
