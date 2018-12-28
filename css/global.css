@@ -349,6 +349,10 @@ a:visited {
   font-family: var(--primary-font-medium);
 }
 
+.FullHeight {
+  height: 100%;
+}
+
 .CustomHidden {
   visibility: hidden;
   pointer-events: none;
@@ -500,6 +504,18 @@ a:visited {
 
 .ContentPadTypeTen {
   padding: 35px 20px;
+}
+
+.ContentPadTypeEleven {
+  padding: 90px 0 0 0;
+}
+
+.BoxSizingDefault {
+  box-sizing: border-box;
+}
+
+.IframeHolder iframe {
+  border: none;
 }
 
 .Entry p {
@@ -1604,7 +1620,7 @@ span.ActionButtonDelete.inactive {
   padding-right: 20px;
 }
 
-.WeatherUpcomingInfoModule .AccordionModule p{
+.WeatherUpcomingInfoModule .AccordionModule p {
   margin: 0;
   padding: 5px 0;
 }

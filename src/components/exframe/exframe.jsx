@@ -18,7 +18,7 @@ export default class Exframe extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className={cx(globalStyles.FullHeight, globalStyles.IframeHolder)}>
         <iframe src={this.state.url} width="100%" height="100%" />
       </div>
     );

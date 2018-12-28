@@ -38,8 +38,19 @@ export default ({
 
     <div className={cx(globalStyles.AppContentArea, globalStyles.NoAppheader)}>
       <div className={cx(globalStyles.MainWrap)}>
-        <div className={cx(globalStyles.MainContentHolder)}>
-          <div className={cx(globalStyles.ContentPadTypeThree)}>
+        <div
+          className={cx(
+            globalStyles.MainContentHolder,
+            globalStyles.FullHeight
+          )}
+        >
+          <div
+            className={cx(
+              globalStyles.ContentPadTypeEleven,
+              globalStyles.FullHeight,
+              globalStyles.BoxSizingDefault
+            )}
+          >
             <Exframe />
           </div>
         </div>
