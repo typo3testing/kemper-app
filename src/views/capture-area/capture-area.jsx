@@ -72,9 +72,7 @@ export default ({
           >
             {currentScreenshotPath && (
               <div className={cx(globalStyles.CapturedImage)}>
-                <CanvasDraw imgSrc={getScreenshotImage()} ref={canvasDraw => (this.saveableCanvas = canvasDraw)} brushColor="#005192" lazyRadius="0" canvasWidth="100%" brushRadius="5" catenaryColor="rgba(0,0,0,0)" loadTimeOffset="0" />
-                <button onClick={() => { localStorage.setItem( "savedDrawing", this.saveableCanvas.getSaveData()); }}> Save </button>
-                <button onClick={() => { this.saveableCanvas.clear(); }}> Clear </button>
+                <CameraShot src={getScreenshotImage()} />
               </div>
             )}
 
