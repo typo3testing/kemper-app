@@ -1,12 +1,11 @@
 import React from "react";
 import cx from "classnames";
 import { Redirect, Router } from "react-router";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import styles from "./haftzugmessung-calculation.css";
 import globalStyles from "../../../css/global.css";
 
 import { ApiService } from "../../services/ApiService";
-
 
 const apiService = new ApiService();
 export default class HaftzugmessungCalculation extends React.Component {
@@ -14,8 +13,14 @@ export default class HaftzugmessungCalculation extends React.Component {
     super(props);
     this.state = {
       content: [],
-      dataReady: true
+      dataReady: true,
+      redirect: false
     };
+    this.loadLink = this.loadLink.bind(this);
+  }
+  loadLink(link) {
+    sessionStorage.setItem("extlink", link);
+    this.setState({ redirect: true });
   }
   componentDidMount() {
     let manufacturer = sessionStorage.getItem("manufacturer");
@@ -43,10 +48,9 @@ export default class HaftzugmessungCalculation extends React.Component {
             globalStyles.LinkBoxPrimaryPart
           )}
         >
-          <a href={v.url} target="_blank" rel="noopener noreferrer">
+          <a onClick={() => this.loadLink(v.url)} href="#">
             <div className={cx(globalStyles.MainWrap)}>{v.category}</div>
           </a>
-
         </div>
         <div
           className={cx(
@@ -80,7 +84,9 @@ export default class HaftzugmessungCalculation extends React.Component {
         </div>
       );
     }
-
+    if (this.state.redirect) {
+      return <Redirect push to="/extpage" />;
+    }
     return (
       <div>
         <div className={cx(globalStyles.LinkBoxModule)}>{contentTemplate}</div>

@@ -14,7 +14,7 @@ export default class MeasurementDropdown extends React.Component {
       designationValues: [],
       redirect: false,
       preloader: true,
-      manufacturer : ""
+      manufacturer: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -22,14 +22,12 @@ export default class MeasurementDropdown extends React.Component {
 
   handleChange(event) {
     event.preventDefault();
-    this.setState({designationValues: []});
+    this.setState({ designationValues: [] });
     let manufacturer = event.target.value;
     let initialPlanets = [];
     if (manufacturer != "") {
       this.setState({ preloader: true });
-      apiService
-      .getDesignation({manufacturer})
-      .then(data => {
+      apiService.getDesignation({ manufacturer }).then(data => {
         initialPlanets = data.map(planet => {
           return planet;
         });
@@ -39,20 +37,16 @@ export default class MeasurementDropdown extends React.Component {
         this.setState({ preloader: false });
         this.setState({ manufacturer: manufacturer });
       });
-    }
-    else{
-       this.setState({
-          designationValues: initialPlanets
-        });
-        this.setState({ manufacturer: "" });
+    } else {
+      this.setState({
+        designationValues: initialPlanets
+      });
+      this.setState({ manufacturer: "" });
     }
   }
 
-
-   handleSubmit(event) {
+  handleSubmit(event) {
     event.preventDefault();
-    
-
     const data = new FormData(event.target);
     if (data.get("manufacturer") != "" && data.get("designation") != "") {
       sessionStorage.setItem("manufacturer", data.get("manufacturer"));
@@ -62,39 +56,37 @@ export default class MeasurementDropdown extends React.Component {
   }
 
   componentDidMount() {
-
-      let initialPlanets = [];
-      if (sessionStorage.getItem("initialManufacturerList") == null) {
-        apiService
-          .getManufacturer()
-          .then(data => {
-            initialPlanets = data.map(planet => {
-              return planet;
-            });
-            sessionStorage.setItem(
-              "initialManufacturerList",
-              JSON.stringify(initialPlanets)
-            );
-            this.setState({
-              manufacturerValues: initialPlanets
-            });
-            this.setState({ preloader: false });
-          })
-          .catch(error => console.log(error));
-      } else {
-        // console.log(JSON.parse(sessionStorage.getItem('initialManufacturerList')));
-        let initialPlanets = JSON.parse(
-          sessionStorage.getItem("initialManufacturerList")
-        );
-        this.setState({
-          manufacturerValues: initialPlanets
-        });
-        this.setState({ preloader: false });
-      }
+    let initialPlanets = [];
+    if (sessionStorage.getItem("initialManufacturerList") == null) {
+      apiService
+        .getManufacturer()
+        .then(data => {
+          initialPlanets = data.map(planet => {
+            return planet;
+          });
+          sessionStorage.setItem(
+            "initialManufacturerList",
+            JSON.stringify(initialPlanets)
+          );
+          this.setState({
+            manufacturerValues: initialPlanets
+          });
+          this.setState({ preloader: false });
+        })
+        .catch(error => console.log(error));
+    } else {
+      // console.log(JSON.parse(sessionStorage.getItem('initialManufacturerList')));
+      let initialPlanets = JSON.parse(
+        sessionStorage.getItem("initialManufacturerList")
+      );
+      this.setState({
+        manufacturerValues: initialPlanets
+      });
+      this.setState({ preloader: false });
+    }
   }
 
   render() {
-    
     if (this.state.preloader) {
       return (
         <div
@@ -117,7 +109,7 @@ export default class MeasurementDropdown extends React.Component {
       );
     }
 
-   let optionManufacturerTemplate = this.state.manufacturerValues.map(v => (
+    let optionManufacturerTemplate = this.state.manufacturerValues.map(v => (
       <option key={v.id} value={v.id}>
         {v.name}
       </option>
@@ -203,6 +195,5 @@ export default class MeasurementDropdown extends React.Component {
         </form>
       </div>
     );
-  
   }
 }
