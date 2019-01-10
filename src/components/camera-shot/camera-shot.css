@@ -3,3 +3,10 @@
   height: 100vh;
   position: absolute;
 }
+.hiddenCamera {
+  display: none !important;
+}
+.canvasCamera {
+  width: 100%;
+  height: auto;
+}

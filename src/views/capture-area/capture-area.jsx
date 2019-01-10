@@ -11,7 +11,7 @@ import globalStyles from "../../../css/global.css";
 
 import TextButton from "../../components/text-button/text-button";
 import Button from "../../components/button/button";
-import { CameraShot } from "../../components/camera-shot/camera-shot.jsx";
+import CameraShot from "../../components/camera-shot/camera-shot.jsx";
 
 import { getProperBackgroundClass } from "../../utils/is-edge";
 
@@ -31,8 +31,7 @@ export default ({
   emailScreenshot,
   cancelScreenshot,
   capture,
-  subjectValue,
-  saveableCanvas
+  subjectValue
 }) => (
   <div className={cx(selectionStyles.Container, styles.Container)}>
     {!capture && <div className={cx(globalStyles.CapturedAreaAtbg)} />}
